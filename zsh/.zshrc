@@ -1,0 +1,55 @@
+###############
+# aliases
+###############
+
+## basics
+#alias ls='ls -AF'
+alias ll='ls -l'
+alias df="df -h"
+alias du="du -h"
+
+## vim
+alias vi=vim
+
+## search
+#alias rgrep="rgrep -R"
+#alias rgrepsvn="rgrep --exclude=\"*.svn*\""
+
+###############
+# zsh
+###############
+
+## Keybind
+bindkey -v
+
+## historical backward/forward search with linehead string binded to ^P/^N
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^P" history-beginning-search-backward-end
+bindkey "^N" history-beginning-search-forward-end
+
+## Command history configuration
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt hist_ignore_dups     # ignore duplication command history list
+setopt share_history        # share command history data
+
+autoload -U compinit
+compinit
+setopt auto_cd
+setopt auto_pushd
+setopt correct
+setopt list_packed
+setopt nolistbeep
+
+## LANG
+#export LANG=ja_JP.UTF-8
+export LANG=en_US.UTF-8
+
+## PROMPT
+#PROMPT="%/%% "
+PROMPT="[${USER}@${HOST%%.*} %1~]%(!.%%.%%) "
+
+
