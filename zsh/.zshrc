@@ -52,4 +52,3 @@ export LANG=en_US.UTF-8
 #PROMPT="%/%% "
 PROMPT="[${USER}@${HOST%%.*} %1~]%(!.%%.%%) "
 
-
