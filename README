@@ -1,11 +1,11 @@
-== 使い方
+使い方
 
 1. get repos.
-1. make symlinks.
+2. make symlinks.
+3. reload sh or vim and more. 
 
-% git clone git@github.com:tetuyoko/dotfiles.git
+% git clone git://github.com/tetuyoko/dotfiles.git
 % cd dofiles
 % ./symlink.rb
- * ruby実行環境があるときのみ
  * ファイルが既に存在する場合はマージするなり削除する
-
+% source ~/.zshrc
