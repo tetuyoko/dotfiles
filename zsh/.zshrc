@@ -57,3 +57,11 @@ PROMPT="[${USER}@${HOST%%.*} %1~]%(!.%%.%%) "
 #SPROMPT="%{$fg_bold[red]%}correct%{$reset_color%}: %R -> %r ? ""}]}"
 
 function chpwd() { ls -v -F --color=auto }
+#function cdup() {
+#  echo
+#  cd ..
+#  zle reset-prompt
+#}
+
+#zle -N cdup
+#bindkey '\^' cdup''
