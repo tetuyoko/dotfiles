@@ -54,4 +54,6 @@ export LANG=ja_JP.UTF-8
 ## PROMPT
 #PROMPT="%/%% "
 PROMPT="[${USER}@${HOST%%.*} %1~]%(!.%%.%%) "
+#SPROMPT="%{$fg_bold[red]%}correct%{$reset_color%}: %R -> %r ? ""}]}"
 
+function chpwd() { ls -v -F --color=auto }
