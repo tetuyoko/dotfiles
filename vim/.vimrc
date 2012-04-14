@@ -58,9 +58,9 @@ inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 inoremap <> <><LEFT>
 
-"backup
-set backup
-"set bakupdir=~/vim_backup
+"backup 
+"set backup
+""set bakupdir=~/vim_backup
 set swapfile
 "set directory=~/vim_swap
 
