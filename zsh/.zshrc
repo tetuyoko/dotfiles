@@ -11,6 +11,9 @@ alias du="du -h"
 ## vim
 alias vi=vim
 
+## screen
+alias sc=screen
+
 ## search
 #alias rgrep="rgrep -R"
 #alias rgrepsvn="rgrep --exclude=\"*.svn*\""
