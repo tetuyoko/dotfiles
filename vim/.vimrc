@@ -24,7 +24,6 @@ set ignorecase
 set smartcase
 set wrapscan
 set hlsearch
-:nnoremap <ESC><ESC> :nohlsearch<CR>
 
 " edit
 " --------------------
