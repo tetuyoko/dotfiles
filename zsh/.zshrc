@@ -14,6 +14,9 @@ alias vi=vim
 ## screen
 alias sc=screen
 
+## Rails
+alias be='bundle exec'
+
 ## search
 #alias rgrep="rgrep -R"
 #alias rgrepsvn="rgrep --exclude=\"*.svn*\""
