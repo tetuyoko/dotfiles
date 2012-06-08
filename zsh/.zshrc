@@ -5,8 +5,8 @@
 ## basics
 #alias ls='ls -AF'
 alias ll='ls -l'
-alias df="df -h"
-alias du="du -h"
+alias df='df -h'
+alias du='du -h'
 
 ## vim
 alias vi=vim
