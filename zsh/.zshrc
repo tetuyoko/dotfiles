@@ -4,6 +4,8 @@
 
 ## basics
 #alias ls='ls -AF'
+#for mac
+alias ls='ls -G'
 alias ll='ls -l'
 alias df='df -h'
 alias du='du -h'
@@ -59,7 +61,8 @@ export LANG=ja_JP.UTF-8
 PROMPT="[${USER}@${HOST%%.*} %1~]%(!.%%.%%) "
 #SPROMPT="%{$fg_bold[red]%}correct%{$reset_color%}: %R -> %r ? ""}]}"
 
-function chpwd() { ls -v -F --color=auto }
+#function chpwd() { ls -v -F --color=auto }
+function chpwd() { ls }
 #function cdup() {
 #  echo
 #  cd ..
