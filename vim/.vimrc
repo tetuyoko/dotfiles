@@ -12,6 +12,10 @@ set showcmd
 "set columns=100
 "set lines=150
 
+" for US keybord
+noremap ; :
+noremap : ; 
+
 " syntax color
 " --------------------
 syntax on
