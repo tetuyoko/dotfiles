@@ -16,6 +16,9 @@ alias vi=vim
 ## screen
 alias sc=screen
 
+## redis
+alias telnet_redis='telnet localhost 6379'
+
 ## Rails
 alias be='bundle exec'
 
