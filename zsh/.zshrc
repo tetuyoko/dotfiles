@@ -13,6 +13,10 @@ alias du='du -h'
 ## vim
 alias vi=vim
 
+## git
+alias gitst="git status"
+alias gitci="git commit"
+
 ## screen
 alias sc=screen
 
