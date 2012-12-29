@@ -5,3 +5,4 @@ d.each do |f|
   puts file = Dir.pwd + '/' + f
   `ln -s #{file} ~/`
 end
+
