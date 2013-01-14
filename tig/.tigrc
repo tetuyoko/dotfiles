@@ -1,0 +1,7 @@
+set show-line-numbers = yes
+set line-number-interval = 1
+
+set show-refs = yes
+set show-rev-graph = yes
+set show-date = local
+
