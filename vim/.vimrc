@@ -27,15 +27,6 @@ Bundle 'FuzzyFinder'
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
 Bundle 'pangloss/vim-javascript'
-Bundle 'quickrun'
-
-" quickrun for Node
-let g:quickrun_config = {
-    \ "javascript" : {
-    \   "command" : "node",
-    \   "tempfile" : "{tempname()}.js"
-    \   }
-    \ }
 
 filetype plugin indent on     " required!
 
