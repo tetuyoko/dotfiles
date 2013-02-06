@@ -9,6 +9,8 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+
+
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
@@ -39,6 +41,16 @@ filetype plugin indent on     " required!
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
+
+" vim-quickrun
+" 
+" bufferを下部に表示
+let g:quickrun_config={'*': {'split': ''}}
+set splitbelow
+" 実行時間を常に表示
+let g:quickrun_config = {'*': {'hook/time/enable': '1'}}
+" buffer出したらカーソルは下部に移動
+let g:quickrun_config = {"_" : { "outputter/buffer/into" : 1,}}
 
 set nocompatible
 set number

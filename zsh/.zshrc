@@ -4,6 +4,8 @@
 
 ## basics
 #alias ls='ls -AF'
+alias so=source
+
 #for mac
 alias ls='ls -G'
 alias ll='ls -l'
