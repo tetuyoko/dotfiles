@@ -9,6 +9,15 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" Neobundle set up
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+  call neobundle#rc(expand('~/.vim/bundle/'))
+endif
+
+" originalrepos on github
+NeoBundle 'neobundle.vim'
+NeoBundle 'vimproc'
 
 " let Vundle manage Vundle
 " required!
@@ -28,6 +37,7 @@ Bundle 'FuzzyFinder'
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
 Bundle 'pangloss/vim-javascript'
+Bundle 'nerdtree'
 
 filetype plugin indent on     " required!
 
@@ -39,7 +49,7 @@ filetype plugin indent on     " required!
 " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
 "
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+" NOTE: comments after Bundle command are not allowed.."""))"))"))"""""")}"""""""}""}
 
 " vim-quickrun
 " 
@@ -47,9 +57,12 @@ filetype plugin indent on     " required!
 let g:quickrun_config={'*': {'split': ''}}
 set splitbelow
 " 実行時間を常に表示
-let g:quickrun_config = {'*': {'hook/time/enable': 1,}}
+let g:quickrun_config = {'*': {'hook/time/enable': '1'}}
 " buffer出したらカーソルは下部に移動
 let g:quickrun_config = {"_" : { "outputter/buffer/into" : 1,}}
+
+"This is To Use vim-pathogen
+call pathogen#infect()
 
 set nocompatible
 set number
@@ -61,18 +74,20 @@ set title
 set linespace=0
 set wildmenu
 set showcmd
+set textwidth=72
 "set textwidth=78
 "set columns=100
 "set lines=150
 
 " for US keybord
-noremap ; :
-noremap : ; 
+"noremap ; :
+"noremap : ; 
 
 " syntax color
 " --------------------
 syntax on
-colorscheme ron
+"colorscheme ron
+colorscheme Tomorrow-Night-Blue
 highlight LineNr ctermfg=darkgrey
 
 " search
@@ -82,6 +97,9 @@ set smartcase
 set wrapscan
 set hlsearch
 :nnoremap <ESC><ESC> :nohlsearch<CR>
+:nnoremap <F9> :NERDTreeToggle
+:nnoremap <F9> :NERDTreeToggle
+map <silent> <C-n> :NERDTreeFocus<CR>
 
 " edit
 " --------------------
@@ -109,12 +127,12 @@ set timeout
 set timeoutlen=500
 
 " brackets
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
-inoremap <> <><LEFT>
+"inoremap { {}<LEFT>
+"inoremap [ []<LEFT>
+"inoremap ( ()<LEFT>
+"inoremap " ""<LEFT>
+"inoremap ' ''<LEFT>
+"inoremap <> <><LEFT>
 
 "backup 
 "set backup

@@ -1,0 +1,11 @@
+使い方
+
+1. get repos.
+2. make symlinks.
+3. reload sh or vim and more. 
+
+% git clone git://github.com/tetuyoko/dotfiles.git
+% cd dofiles
+% ./symlink.rb
+ * ファイルが既に存在する場合はマージするなり削除する
+% source ~/.zshrc

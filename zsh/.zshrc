@@ -1,32 +1,35 @@
+export USDPRO=/Users/yokoyama_tetsuro/project/usdragon/git-wk3/usdragon-server
+
 ###############
 # aliases
 ###############
 
 ## basics
 #alias ls='ls -AF'
-alias so=source
-
 #for mac
+alias so='source'
+alias less='less -R'
 alias ls='ls -G'
-alias ll='ls -l'
+alias ll='ls -l -h'
 alias df='df -h'
 alias du='du -h'
+alias sdif='svn diff . | /usr/share/vim/vim73/macros/less.sh'
+alias svnlog='svn log -v -r {2012-12-25}:HEAD'
+alias udinit='DXD_MASS_ASSIGNMENT_PROTECTION_PASS=1 bundle exec rake dxd:db:fake dxd:kvs:init'
+alias grep='grep --color=auto'
 
 ## vim
 alias vi=vim
 
-## git
-alias gitst="git status"
-alias gitci="git commit"
-
 ## screen
 alias sc=screen
 
-## redis
-alias telnet_redis='telnet localhost 6379'
-
 ## Rails
 alias be='bundle exec'
+alias bes='bundle exec spring'
+
+## git
+alias git-archive='git archive --format=tar HEAD | gzip > foo.tar.gz'
 
 ## search
 #alias rgrep="rgrep -R"
@@ -38,6 +41,7 @@ alias be='bundle exec'
 
 ## Keybind
 bindkey -v
+umask 002
 
 ## historical backward/forward search with linehead string binded to ^P/^N
 autoload history-search-end
@@ -80,3 +84,18 @@ function chpwd() { ls }
 
 #zle -N cdup
 #bindkey '\^' cdup''
+
+# UNIXTIME to date
+function ut2date {
+ /bin/date -u -r $1 +"%Y/%m/%d %H:%M:%S UTC"
+ /bin/date -r $1 +"%Y/%m/%d %H:%M:%S"
+}
+
+# date to UNIXTIME
+function date2ut {
+ /bin/date -j -f "%Y/%m/%d %H:%M:%S" "$1" +%s
+}
+
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
