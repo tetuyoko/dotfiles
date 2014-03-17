@@ -17,6 +17,8 @@ alias sdif='svn diff . | /usr/share/vim/vim73/macros/less.sh'
 alias svnlog='svn log -v -r {2012-12-25}:HEAD'
 alias udinit='DXD_MASS_ASSIGNMENT_PROTECTION_PASS=1 bundle exec rake dxd:db:fake dxd:kvs:init'
 alias grep='grep --color=auto'
+alias rm='rmtrash'
+alias mv='mv -i'
 
 ## vim
 alias vi=vim
