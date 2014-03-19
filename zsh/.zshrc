@@ -1,8 +1,10 @@
 export USDPRO=/Users/yokoyama_tetsuro/project/usdragon/git-wk3/usdragon-server
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
-###############
+#############################################
 # aliases
-###############
+#############################################
 
 ## basics
 #alias ls='ls -AF'
@@ -15,31 +17,24 @@ alias df='df -h'
 alias du='du -h'
 alias sdif='svn diff . | /usr/share/vim/vim73/macros/less.sh'
 alias svnlog='svn log -v -r {2012-12-25}:HEAD'
-alias udinit='DXD_MASS_ASSIGNMENT_PROTECTION_PASS=1 bundle exec rake dxd:db:fake dxd:kvs:init'
 alias grep='grep --color=auto'
 alias rm='rmtrash'
 alias mv='mv -i'
-
-## vim
 alias vi=vim
-
-## screen
 alias sc=screen
 
 ## Rails
 alias be='bundle exec'
 alias bes='bundle exec spring'
-
-## git
-alias git-archive='git archive --format=tar HEAD | gzip > foo.tar.gz'
+#alias git-archive='git archive --format=tar HEAD | gzip > foo.tar.gz'
 
 ## search
 #alias rgrep="rgrep -R"
 #alias rgrepsvn="rgrep --exclude=\"*.svn*\""
 
-###############
+#############################################
 # zsh
-###############
+#############################################
 
 ## Keybind
 bindkey -v
@@ -71,12 +66,37 @@ setopt nolistbeep
 export LANG=ja_JP.UTF-8
 #export LANG=en_US.UTF-8
 
-## PROMPT
-#PROMPT="%/%% "
-PROMPT="[${USER}@${HOST%%.*} %1~]%(!.%%.%%) "
-#SPROMPT="%{$fg_bold[red]%}correct%{$reset_color%}: %R -> %r ? ""}]}"
 
-#function chpwd() { ls -v -F --color=auto }
+#############################################
+## PROMPT
+#############################################
+
+## PROMPT
+local pinfo="%n@%m${WINDOW:+"[$WINDOW]"}"
+local pdir="%B%F{blue}%1~%f%b"
+local pmark="%B%(?,%F{gray},%F{red})%(!.%%.%%)%f%b"
+PROMPT="[$pinfo $pdir] $pmark "
+
+## SPROMPT
+SPROMPT="%{%F{red}correct%f%{$reset_color%}: %R -> %r ?(ynae) "
+
+## RPROMPT
+# VCS settings
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats '(%b)'
+zstyle ':vcs_info:*' actionformats '(%b|%a)'
+precmd() {
+  psvar=()
+  LANG=en_US.UTF-8 vcs_info
+   [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
+RPROMPT="%1(v|%F{green}%1v%f|)"
+
+
+#############################################
+## function
+#############################################
+
 function chpwd() { ls }
 #function cdup() {
 #  echo
@@ -98,6 +118,3 @@ function date2ut {
  /bin/date -j -f "%Y/%m/%d %H:%M:%S" "$1" +%s
 }
 
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
