@@ -6,6 +6,10 @@ autocmd QuickFixCmdPost make copen
 
 filetype off                   " required!
 
+inoremap jk <ESC>
+let mapleader = ","
+noremap \  ,
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
