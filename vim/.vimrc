@@ -101,8 +101,7 @@ set smartcase
 set wrapscan
 set hlsearch
 :nnoremap <ESC><ESC> :nohlsearch<CR>
-:nnoremap <F9> :NERDTreeToggle
-:nnoremap <F9> :NERDTreeToggle
+:nnoremap <F9> :NERDTreeToggle<CR>
 map <silent> <C-n> :NERDTreeFocus<CR>
 
 " edit
