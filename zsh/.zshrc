@@ -1,6 +1,20 @@
 export USDPRO=/Users/yokoyama_tetsuro/project/usdragon/git-wk3/usdragon-server
+export SAKURAS=/Users/yokoyama_tetsuro/project/sakura-server
+export SAKURAC=/Users/yokoyama_tetsuro/project/sakura-client
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Android dev environment for MacOS
+export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
+export ANDROID_HOME=/opt/adt-bundle-mac-x86_64/sdk
+export ANDROID_NDK_ROOT=/opt/android-ndk
+export PATH=${ANDROID_NDK_ROOT}:$PATH
+export PATH=${ANDROID_HOME}/platform-tools:$PATH
+export PATH=${ANDROID_HOME}/tools:$PATH
+
+export NDK_ROOT=${ANDROID_NDK_ROOT} 
+export ANDROID_SDK_ROOT=${ANDROID_HOME}
 
 #############################################
 # aliases
