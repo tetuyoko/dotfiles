@@ -15,13 +15,24 @@ call vundle#rc()
 
 " Neobundle set up
 if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#rc(expand('~/.vim/bundle/'))
+  set nocompatible
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-" originalrepos on github
-NeoBundle 'neobundle.vim'
-NeoBundle 'vimproc'
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'szw/vim-tags'
+"NeoBundle 'vimproc'
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'flazz/vim-colorschemes'
+
+call neobundle#end()
+filetype plugin indent on
+NeoBundleCheck
 
 " let Vundle manage Vundle
 " required!
@@ -43,8 +54,7 @@ Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'pangloss/vim-javascript'
 Bundle 'nerdtree'
 
-filetype plugin indent on     " required!
-
+filetype "plugin indent on     " required!
 "
 " Brief help
 " :BundleList          - list configured bundles
@@ -67,6 +77,8 @@ let g:quickrun_config = {"_" : { "outputter/buffer/into" : 1,}}
 
 "This is To Use vim-pathogen
 call pathogen#infect()
+
+runtime macros/editexisting.vim
 
 set nocompatible
 set number
