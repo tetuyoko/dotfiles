@@ -1,6 +1,11 @@
 export USDPRO=/Users/yokoyama_tetsuro/project/usdragon/git-wk3/usdragon-server
 export SAKURAS=/Users/yokoyama_tetsuro/project/sakura-server
 export SAKURAC=/Users/yokoyama_tetsuro/project/sakura-client
+export SK_WORK_DIR=/Users/yokoyama_tetsuro/project/sakura-client
+#export V_TARGET_ID="android-16"
+export V_TARGET_ID="android-14"
+export IPHONE_SIM=~/Library/Application\ Support/iPhone\ Simulator
+
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
@@ -8,12 +13,13 @@ eval "$(rbenv init -)"
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
 export ANDROID_HOME=/opt/adt-bundle-mac-x86_64/sdk
-export ANDROID_NDK_ROOT=/opt/android-ndk
+export ANDROID_NDK_ROOT=/opt/android-ndk-r8e
 export PATH=${ANDROID_NDK_ROOT}:$PATH
 export PATH=${ANDROID_HOME}/platform-tools:$PATH
 export PATH=${ANDROID_HOME}/tools:$PATH
 
 export NDK_ROOT=${ANDROID_NDK_ROOT} 
+export NDK_CCACHE=`which ccache`
 export ANDROID_SDK_ROOT=${ANDROID_HOME}
 
 #############################################
@@ -32,7 +38,7 @@ alias du='du -h'
 alias sdif='svn diff . | /usr/share/vim/vim73/macros/less.sh'
 alias svnlog='svn log -v -r {2012-12-25}:HEAD'
 alias grep='grep --color=auto'
-alias rm='rmtrash'
+#alias rm='rmtrash'
 alias mv='mv -i'
 alias vi=vim
 alias sc=screen
