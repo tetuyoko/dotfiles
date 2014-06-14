@@ -4,6 +4,13 @@ if !exists('b:current_compiler')
 endif
 autocmd QuickFixCmdPost make copen
 
+autocmd BufReadPre *.jpg execute('!osascript ~/setimage.scpt %:p')
+autocmd BufReadPre *.jpeg execute('!osascript ~/setimage.scpt %:p')
+autocmd BufReadPre *.png execute('!osascript ~/setimage.scpt %:p')
+autocmd BufReadPre *.gif execute('!osascript ~/setimage.scpt %:p')
+autocmd BufReadPre *.tga execute('!osascript ~/setimage.scpt %:p')
+autocmd BufReadPre *.tiff execute('!osascript ~/setimage.scpt %:p')
+
 filetype off                   " required!
 
 inoremap jk <ESC>

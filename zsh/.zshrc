@@ -42,6 +42,7 @@ alias grep='grep --color=auto'
 alias mv='mv -i'
 alias vi=vim
 alias sc=screen
+alias chrm='open "/Applications/Google Chrome.app" --args --profile-directory="Defalut"'
 
 ## Rails
 alias be='bundle exec'
@@ -73,6 +74,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt hist_ignore_dups     # ignore duplication command history list
 setopt share_history        # share command history data
+setopt EXTENDED_HISTORY
 
 autoload -U compinit
 compinit
@@ -137,4 +139,7 @@ function ut2date {
 function date2ut {
  /bin/date -j -f "%Y/%m/%d %H:%M:%S" "$1" +%s
 }
+
+function history-all { history -E 1 }
+
 
