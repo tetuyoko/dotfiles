@@ -4,21 +4,14 @@ if !exists('b:current_compiler')
 endif
 autocmd QuickFixCmdPost make copen
 
-autocmd BufReadPre *.jpg execute('!osascript ~/setimage.scpt %:p')
-autocmd BufReadPre *.jpeg execute('!osascript ~/setimage.scpt %:p')
-autocmd BufReadPre *.png execute('!osascript ~/setimage.scpt %:p')
-autocmd BufReadPre *.gif execute('!osascript ~/setimage.scpt %:p')
-autocmd BufReadPre *.tga execute('!osascript ~/setimage.scpt %:p')
-autocmd BufReadPre *.tiff execute('!osascript ~/setimage.scpt %:p')
-
 filetype off                   " required!
 
 inoremap jk <ESC>
 let mapleader = ","
-noremap \  ,
+noremap \ ,
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set rtp+=~/.vim/bundle/vundle/
+" call vundle#rc()
 
 " Neobundle set up
 if has('vim_starting')
@@ -30,37 +23,36 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'szw/vim-tags'
-"NeoBundle 'vimproc'
+NeoBundle 'vimproc'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-rails'
 
 call neobundle#end()
+
 filetype plugin indent on
-NeoBundleCheck
+" NeoBundleCheck
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+" Bundle 'gmarik/vundle'
 
 " My Bundles here:
 "
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
+"Bundle 'tpope/vim-fugitive'
+"Bundle 'Lokaltog/vim-easymotion'
+"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+"Bundle 'L9'
+"Bundle 'FuzzyFinder'
 " non github repos
-Bundle 'git://git.wincent.com/command-t.git'
-" ...
-Bundle 'pangloss/vim-javascript'
-Bundle 'nerdtree'
-
+"Bundle 'git://git.wincent.com/command-t.git'
+"Bundle 'pangloss/vim-javascript'
 
 " vim-quickrun
 " bufferを下部に表示
@@ -72,7 +64,7 @@ let g:quickrun_config = {'*': {'hook/time/enable': '1'}}
 let g:quickrun_config = {"_" : { "outputter/buffer/into" : 1,}}
 
 "This is To Use vim-pathogen
-call pathogen#infect()
+"call pathogen#infect()
 
 runtime macros/editexisting.vim
 
@@ -92,14 +84,14 @@ set textwidth=72
 "set lines=150
 
 " for US keybord
-"noremap ; :
-"noremap : ; 
+noremap ; :
+noremap : ; 
 
 " syntax color
 " --------------------
 syntax on
 "colorscheme ron
-colorscheme Tomorrow-Night-Blue
+"colorscheme Tomorrow-Night-Blue
 highlight LineNr ctermfg=darkgrey
 
 " search

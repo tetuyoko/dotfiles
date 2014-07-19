@@ -22,6 +22,10 @@ export NDK_ROOT=${ANDROID_NDK_ROOT}
 export NDK_CCACHE=`which ccache`
 export ANDROID_SDK_ROOT=${ANDROID_HOME}
 
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT=/Users/tetuyoko/cocos2d-x-3.2/tools/cocos2d-console/bin
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
 #############################################
 # aliases
 #############################################
@@ -141,5 +145,6 @@ function date2ut {
 }
 
 function history-all { history -E 1 }
+
 
 
