@@ -81,7 +81,7 @@ setopt share_history        # share command history data
 setopt EXTENDED_HISTORY
 
 autoload -U compinit
-compinit
+compinit -u
 setopt auto_cd
 setopt auto_pushd
 setopt correct
@@ -168,3 +168,8 @@ export PATH=$COCOS_CONSOLE_ROOT:$PATH
 # Add environment variable ANT_ROOT for cocos2d-x
 export ANT_ROOT=/usr/local/Cellar/ant/1.9.3/libexec/bin
 export PATH=$ANT_ROOT:$PATH
+
+unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/help
+
