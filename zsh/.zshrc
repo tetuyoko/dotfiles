@@ -135,16 +135,36 @@ function chpwd() { ls }
 
 # UNIXTIME to date
 function ut2date {
- /bin/date -u -r $1 +"%Y/%m/%d %H:%M:%S UTC"
- /bin/date -r $1 +"%Y/%m/%d %H:%M:%S"
+  /bin/date -u -r $1 +"%Y/%m/%d %H:%M:%S UTC"
+  /bin/date -r $1 +"%Y/%m/%d %H:%M:%S"
 }
 
 # date to UNIXTIME
 function date2ut {
- /bin/date -j -f "%Y/%m/%d %H:%M:%S" "$1" +%s
+  /bin/date -j -f "%Y/%m/%d %H:%M:%S" "$1" +%s
 }
+
+function exists { which $1 &> /dev/null }
+
+if exists peco; then
+  function peco_select_history() {
+    local tac
+    exists gtac && tac="gtac" || { exists tac && tac="tac" || { tac="tail -r" } }
+    BUFFER=$(history -n 1 | eval $tac | peco --query "$LBUFFER")
+    CURSOR=$#BUFFER         # move cursor
+    zle -R -c               # refresh
+  }
+
+  zle -N peco_select_history
+  bindkey '^R' peco_select_history
+fi
 
 function history-all { history -E 1 }
 
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT=/Users/yokoyama_tetsuro/cocos2d-x-3.2/tools/cocos2d-console/bin
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
-
+# Add environment variable ANT_ROOT for cocos2d-x
+export ANT_ROOT=/usr/local/Cellar/ant/1.9.3/libexec/bin
+export PATH=$ANT_ROOT:$PATH

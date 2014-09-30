@@ -84,8 +84,8 @@ set textwidth=72
 "set lines=150
 
 " for US keybord
-noremap ; :
-noremap : ; 
+" noremap ; :
+" noremap : ; 
 
 " syntax color
 " --------------------
