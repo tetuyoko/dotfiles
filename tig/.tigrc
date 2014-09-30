@@ -1,10 +1,16 @@
-bind generic g move-first-line
-bind generic G move-last-line
+set commit-order = topo         # Order commits topologically
+set git-colors = yes
+set blame-options = -C -C -C 
+set reference-format = (branch) <tag>
 
-set show-line-numbers = yes
-set line-number-interval = 1
+set blame-view = \
+        date:local\
+        author:abbreviated \
+        file-name:auto \
+        id:yes,color \
+        line-number:yes,interval=5 text
 
-set show-refs = yes
-set show-rev-graph = yes
-set show-date = local
+set pager-view = line-number:yes,interval=10 text
+
+set tree-view = line-number:yes
 
