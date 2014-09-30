@@ -102,7 +102,8 @@ set wrapscan
 set hlsearch
 :nnoremap <ESC><ESC> :nohlsearch<CR>
 :nnoremap <F9> :NERDTreeToggle<CR>
-map <silent> <C-n> :NERDTreeFocus<CR>
+:nnoremap <silent><C-n> :NERDTreeToggle<CR>
+" :nnoremap <F9> :NERDTreeToggle<CR>
 
 " edit
 " --------------------
