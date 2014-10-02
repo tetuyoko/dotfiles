@@ -1,13 +1,13 @@
 " JavaScript Lint
-if !exists('b:current_compiler')
-  compiler jsl
-endif
-autocmd QuickFixCmdPost make copen
+" if !exists('b:current_compiler')
+"   compiler jsl
+" endif
+" autocmd QuickFixCmdPost make copen
 
 filetype off                   " required!
 
 inoremap jk <ESC>
-let mapleader = ","
+" let mapleader = ","
 noremap \ ,
 
 " set rtp+=~/.vim/bundle/vundle/
@@ -22,6 +22,7 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'szw/vim-tags'
 NeoBundle 'vimproc'
 NeoBundle 'Shougo/neosnippet.vim'
@@ -31,6 +32,10 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-rails'
+
+let g:syntastic_mode_map = { 'mode': 'passive',
+            \ 'active_filetypes': ['ruby'] }
+let g:syntastic_ruby_checkers = ['rubocop']
 
 call neobundle#end()
 

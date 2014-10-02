@@ -2,6 +2,7 @@ export USDPRO=/Users/yokoyama_tetsuro/project/usdragon/git-wk3/usdragon-server
 export SAKURAS=/Users/yokoyama_tetsuro/project/sakura-server
 export SAKURAC=/Users/yokoyama_tetsuro/project/sakura-client
 export SK_WORK_DIR=/Users/yokoyama_tetsuro/project/sakura-client
+export WST=/Users/tetuyoko/test/workstation
 #export V_TARGET_ID="android-16"
 export V_TARGET_ID="android-14"
 export IPHONE_SIM=~/Library/Application\ Support/iPhone\ Simulator
