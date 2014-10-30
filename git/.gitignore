@@ -1,6 +1,8 @@
 .DS_Store
 nbproject
 *.swp
+*.swo
 *.bak
-tags
+#tags
 *.xccheckout
+
