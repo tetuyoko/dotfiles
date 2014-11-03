@@ -43,7 +43,7 @@ alias gd='dirs -v; echo -n "select number: "; read newdir; cd +"$newdir"'
 #############################################
 
 ## Keybind
-bindkey -v
+bindkey -v # vim bind
 umask 002
 
 ## historical backward/forward search with linehead string binded to ^P/^N
@@ -57,25 +57,23 @@ bindkey "^N" history-beginning-search-forward-end
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
-setopt hist_ignore_dups     # ignore duplication command history list
-setopt share_history        # share command history data
+setopt HIST_IGNORE_DUPS     # ignore duplication command history list
+setopt SHARE_HISTORY        # share command history data
 setopt EXTENDED_HISTORY
 
 fpath=($HOME/zsh/functions/cd-gitroot(N-/) $fpath)
 
 autoload -U compinit
 compinit -u
-setopt auto_cd
-setopt auto_pushd
-setopt pushd_ignore_dups
-setopt correct
-setopt list_packed
-setopt nolistbeep
-
-# pushd
-# http://www.ayu.ics.keio.ac.jp/~mukai/tips/zshdir.html
-#setopt AUTO_PUSHD
-#setopt PUSHD_IGNORE_DUPS
+setopt AUTO_CD            # less cd only directory
+setopt AUTO_PUSHD         # save cd history to PUSHD
+setopt PUSHD_IGNORE_DUPS  # ignore duplication  PUSHD
+setopt CORRECT            # pattern展開
+setopt LIST_PACKED
+setopt NO_LIST_BEEP
+setopt NO_BEEP
+setopt IGNORE_EOF # ^Dでzshを終了しない
+setopt NO_FLOW_CONTROL # ^Q/^Sのフローコントロールを無効にする
 
 #############################################
 ## PROMPT
