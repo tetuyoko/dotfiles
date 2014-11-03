@@ -150,6 +150,11 @@ RPROMPT="%1(v|%F{green}%1v%f|)"
 autoload -Uz cd-gitroot
 alias cdu='cd-gitroot'
 
+# % zman SHARE_HISTORY
+function zman() {
+  PAGER="less -g -s '+/^ {7}"$1"'" man zshall
+}
+
 function chpwd() { ls }
 
 function cdup() {
