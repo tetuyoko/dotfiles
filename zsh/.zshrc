@@ -52,6 +52,8 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
+bindkey "^R" history-incremental-pattern-search-backward
+bindkey "^S" history-incremental-pattern-search-forward
 
 ## Command history configuration
 HISTFILE=~/.zsh_history
@@ -63,8 +65,9 @@ setopt EXTENDED_HISTORY
 
 fpath=($HOME/zsh/functions/cd-gitroot(N-/) $fpath)
 
-autoload -U compinit
+autoload -Uz compinit
 compinit -u
+
 setopt AUTO_CD            # less cd only directory
 setopt AUTO_PUSHD         # save cd history to PUSHD
 setopt PUSHD_IGNORE_DUPS  # ignore duplication  PUSHD
