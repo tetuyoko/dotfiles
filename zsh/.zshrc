@@ -65,9 +65,7 @@ setopt SHARE_HISTORY        # share command history data
 setopt EXTENDED_HISTORY
 
 fpath=($HOME/zsh/functions/cd-gitroot(N-/) $fpath)
-
-autoload -Uz compinit
-compinit -u
+fpath=($HOME/zsh/functions/zsh-completions/src(N-/) $fpath)
 
 setopt AUTO_CD            # less cd only directory
 setopt AUTO_PUSHD         # save cd history to PUSHD
@@ -168,3 +166,14 @@ autoload run-help
 HELPDIR=/usr/local/share/zsh/help
 
 cd `cat ~/.curdir`
+
+# zmv -W '*.html' '*.txt'
+autoload -Uz zmv
+alias zmv='noglob zmv -W'
+
+autoload -Uz compinit
+compinit -u
+#compinit -u
+
+
+source $HOME/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
