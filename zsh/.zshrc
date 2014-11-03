@@ -24,6 +24,7 @@ alias -g G='| grep'
 alias -g H='| head'
 alias -g N='> /dev/null'
 
+
 ## Rails
 alias be='bundle exec'
 alias bes='bundle exec spring'
@@ -34,6 +35,8 @@ alias biv='bundle install --path=vendor/bundle'
 ## search
 #alias rgrep="rgrep -R"
 #alias rgrepsvn="rgrep --exclude=\"*.svn*\""
+
+alias gd='dirs -v; echo -n "select number: "; read newdir; cd +"$newdir"'
 
 #############################################
 # zsh
@@ -72,7 +75,6 @@ setopt nolistbeep
 # pushd
 # http://www.ayu.ics.keio.ac.jp/~mukai/tips/zshdir.html
 #setopt AUTO_PUSHD
-alias gd='dirs -v; echo -n "select number: "; read newdir; cd +"$newdir"'
 #setopt PUSHD_IGNORE_DUPS
 
 #############################################
