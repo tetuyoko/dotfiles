@@ -25,10 +25,6 @@ export NDK_ROOT=${ANDROID_NDK_ROOT}
 export NDK_CCACHE=`which ccache`
 export ANDROID_SDK_ROOT=${ANDROID_HOME}
 
-export USDPRO=/Users/yokoyama_tetsuro/project/usdragon/git-wk3/usdragon-server
-export SAKURAS=/Users/yokoyama_tetsuro/project/sakura-server
-export SAKURAC=/Users/yokoyama_tetsuro/project/sakura-client
-export SK_WORK_DIR=/Users/yokoyama_tetsuro/project/sakura-client
 export WST=/Users/tetuyoko/test/workstation
 
 #############################################
@@ -52,6 +48,10 @@ alias mv='mv -i'
 alias vi=vim
 alias sc=screen
 alias chrm='open "/Applications/Google Chrome.app" --args --profile-directory="Defalut"'
+alias -g L='| less'
+alias -g G='| grep'
+alias -g H='| head'
+alias -g N='> /dev/null'
 
 ## Rails
 alias be='bundle exec'
@@ -87,6 +87,8 @@ setopt hist_ignore_dups     # ignore duplication command history list
 setopt share_history        # share command history data
 setopt EXTENDED_HISTORY
 
+fpath=($HOME/zsh/functions/cd-gitroot(N-/) $fpath)
+
 autoload -U compinit
 compinit -u
 setopt auto_cd
@@ -95,6 +97,12 @@ setopt pushd_ignore_dups
 setopt correct
 setopt list_packed
 setopt nolistbeep
+
+# pushd
+# http://www.ayu.ics.keio.ac.jp/~mukai/tips/zshdir.html
+#setopt AUTO_PUSHD
+alias gd='dirs -v; echo -n "select number: "; read newdir; cd +"$newdir"'
+#setopt PUSHD_IGNORE_DUPS
 
 ## LANG
 export LANG=ja_JP.UTF-8
@@ -139,15 +147,18 @@ RPROMPT="%1(v|%F{green}%1v%f|)"
 ## function
 #############################################
 
-function chpwd() { ls }
-#function cdup() {
-#  echo
-#  cd ..
-#  zle reset-prompt
-#}
+autoload -Uz cd-gitroot
+alias cdu='cd-gitroot'
 
-#zle -N cdup
-#bindkey '\^' cdup''
+function chpwd() { ls }
+
+function cdup() {
+  echo
+  cd ..
+  zle reset-prompt
+}
+zle -N cdup
+#bindkey '\^' cdup
 
 # UNIXTIME to date
 function ut2date {
