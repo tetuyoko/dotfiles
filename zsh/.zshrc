@@ -19,16 +19,18 @@ alias mv='mv -i'
 alias vi=vim
 alias sc=screen
 alias chrm='open "/Applications/Google Chrome.app" --args --profile-directory="Defalut"'
-alias -g L='| less'
-alias -g G='| grep'
-alias -g H='| head'
-alias -g N='> /dev/null'
-
 
 ## Rails
 alias be='bundle exec'
 alias bes='bundle exec spring'
 alias biv='bundle install --path=vendor/bundle' 
+
+## global
+alias -g L='| less'
+alias -g G='| grep'
+alias -g H='| head'
+alias -g N='> /dev/null'
+
 
 #alias git-archive='git archive --format=tar HEAD | gzip > foo.tar.gz'
 
@@ -49,7 +51,6 @@ umask 002
 ## historical backward/forward search with linehead string binded to ^P/^N
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 bindkey "^R" history-incremental-pattern-search-backward
