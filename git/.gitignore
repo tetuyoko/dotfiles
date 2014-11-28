@@ -3,6 +3,7 @@ nbproject
 *.swp
 *.swo
 *.bak
+*.key
 #tags
 *.xccheckout
 
