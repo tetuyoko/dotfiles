@@ -1,3 +1,10 @@
+scriptencoding utf-8
+" ミュートにする
+set t_vb=
+set visualbell
+set noerrorbells
+set modeline
+
 " JavaScript Lint
 " if !exists('b:current_compiler')
 "   compiler jsl
