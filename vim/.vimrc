@@ -32,11 +32,17 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-rails'
+NeoBundle 'shime/vim-livedown'
 
 let g:syntastic_mode_map = { 'mode': 'passive',
             \ 'active_filetypes': ['ruby'] }
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
  "let g:vimrubocop_config = '.rubocop.yml'
+ 
+"let g:livedown_autorun = 0
+"let g:livedown_open = 1
+"let g:livedown_port = 1337
+noremap gm :call LivedownPreview()<CR>
 
 call neobundle#end()
 
