@@ -28,7 +28,11 @@ export NDK_ROOT=${ANDROID_NDK_ROOT}
 export NDK_CCACHE=`which ccache`
 export ANDROID_SDK_ROOT=${ANDROID_HOME}
 
-export WST=/Users/tetuyoko/test/workstation
+# golang
+ #export GOROOT=$HOME/go
+ #export PATH=$PATH:$GOROOT/bin
+export GOPATH=$HOME/gocode
+export PATH=$PATH:$GOPATH/bin
 
 ## LANG
 export LANG=ja_JP.UTF-8
