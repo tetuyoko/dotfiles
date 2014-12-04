@@ -161,5 +161,5 @@ set timeoutlen=500
 "set backup
 ""set bakupdir=~/vim_backup
 set swapfile
-"set directory=~/vim_swap
+set directory=~/.vim/swp
 
