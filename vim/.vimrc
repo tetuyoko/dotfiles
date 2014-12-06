@@ -6,10 +6,10 @@ set noerrorbells
 set modeline
 
 " JavaScript Lint
-" if !exists('b:current_compiler')
-"   compiler jsl
-" endif
-" autocmd QuickFixCmdPost make copen
+if !exists('b:current_compiler')
+  compiler jsl
+endif
+autocmd QuickFixCmdPost make copen
 
 filetype off                   " required!
 
