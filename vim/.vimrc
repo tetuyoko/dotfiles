@@ -127,7 +127,7 @@ set hlsearch
 
 " :nnoremap <F9> :NERDTreeToggle<CR>
 
-let g:NERDTreeIgnore=['\.git$',  '\.clean$', '\.swp$', '\.bak$', '\~$']
+let g:NERDTreeIgnore=['\.sass-cache', '\.DS_Store','\.bundle$',  '\.git$',  '\.clean$', '\.swp$', '\.bak$', '\~$']
 let g:NERDTreeShowHidden=1
 let g:NERDTreeMinimalUI=1
 let g:NERDTreeDirArrows=0
