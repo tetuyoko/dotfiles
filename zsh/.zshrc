@@ -96,7 +96,7 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats '(%b)'
 zstyle ':vcs_info:*' actionformats '(%b|%a)'
 
-. /usr/local/etc/autojump.zsh
+#. /usr/local/bin/autojump
 
 precmd() {
   psvar=()
@@ -105,7 +105,7 @@ precmd() {
 
    pwd=`pwd`
    #echo "[^[[35m$pwd^[[m]"
-   autojump -a $pwd
+   #autojump -a $pwd
    echo $pwd > ~/.curdir
 }
 

@@ -5,6 +5,25 @@ set visualbell
 set noerrorbells
 set modeline
 
+" クリップボード設定
+set clipboard=unnamed
+
+" TagBar
+nnoremap <silent> ,t :TagbarToggle<CR>
+let g:tagbar_left = 1
+let g:tagbar_width = 30
+let g:tagbar_updateonsave_maxlines = 10000
+let g:tagbar_sort = 0
+
+" ステータスライン表示
+set laststatus=2
+set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%{tagbar#currenttag('[%s]','')}%{fugitive#statusline()}%{SyntasticStatuslineFlag()}%{exists('*SkkGetModeStr')?SkkGetModeStr():''}%=%l/%L,%c%V%8P\ 
+set noshowmode
+set wildmenu
+set cmdheight=2
+set wildmode=list:full
+set showcmd
+
 " JavaScript Lint
 if !exists('b:current_compiler')
   compiler jsl
@@ -40,6 +59,19 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'shime/vim-livedown'
+NeoBundle 'majutsushi/tagbar'
+" 自動で閉じる
+NeoBundle 'tpope/vim-endwise'
+" ドキュメント参照
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'yuku-t/vim-ref-ri'
+
+" -------------------------------
+" Rsense
+" -------------------------------
+let g:rsenseHome = '/usr/local/Cellar/rsense/0.3/libexec'
+let g:rsenseUseOmniFunc = 1
+setlocal completefunc=RSenseCompleteFunction
 
 let g:syntastic_mode_map = { 'mode': 'passive',
             \ 'active_filetypes': ['ruby'] }
@@ -91,8 +123,6 @@ set nocompatible
 set number
 set ruler
 set cmdheight=2
-set laststatus=2
-set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 set title
 set linespace=0
 set wildmenu
@@ -172,3 +202,6 @@ set timeoutlen=500
 set swapfile
 set directory=~/.vim/swp
 
+execute pathogen#infect()
+syntax on
+filetype plugin indent on

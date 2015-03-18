@@ -1,4 +1,6 @@
 #!/bin/sh
 
 mysql.server start
-redis-server /usr/local/etc/redis.conf
+pg_ctl start -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log
+redis-server
+#redis-server /usr/local/etc/redis.conf
