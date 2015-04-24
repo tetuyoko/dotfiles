@@ -36,6 +36,9 @@ inoremap jk <ESC>
 " let mapleader = ","
 noremap \ ,
 
+" Ctrpで0番レジスタを呼ぶ
+vnoremap <silent> <C-p> "0p<CR>
+
 " set rtp+=~/.vim/bundle/vundle/
 " call vundle#rc()
 
