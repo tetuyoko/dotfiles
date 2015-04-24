@@ -176,3 +176,4 @@ compinit -u
 #compinit -u
 
 source $HOME/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(direnv hook zsh)"
