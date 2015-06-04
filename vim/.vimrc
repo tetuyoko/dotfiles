@@ -68,6 +68,7 @@ NeoBundle 'tpope/vim-endwise'
 " ドキュメント参照
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'yuku-t/vim-ref-ri'
+NeoBundle 'fatih/vim-go'
 
 " -------------------------------
 " Rsense
