@@ -4,6 +4,10 @@ eval "$(rbenv init -)"
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin
 export PATH=$PATH:/usr/local/mysql/bin
 
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/tetuyoko/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+
 #export V_TARGET_ID="android-16"
 export V_TARGET_ID="android-14"
 export IPHONE_SIM=~/Library/Application\ Support/iPhone\ Simulator
