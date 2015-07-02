@@ -36,6 +36,7 @@ export ANDROID_SDK_ROOT=${ANDROID_HOME}
  #export GOROOT=$HOME/go
  #export PATH=$PATH:$GOROOT/bin
 export GOPATH=$HOME/gocode
+export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 
 ## LANG
