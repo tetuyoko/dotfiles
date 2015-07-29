@@ -31,6 +31,8 @@ alias -g G='| grep'
 alias -g H='| head'
 alias -g N='> /dev/null'
 
+## use GNU readlink
+alias readlink=greadlink
 
 #alias git-archive='git archive --format=tar HEAD | gzip > foo.tar.gz'
 

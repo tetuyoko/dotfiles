@@ -39,6 +39,8 @@ export GOPATH=$HOME/gocode
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 
+export MGNCV=/Users/tetuyoko/gocode/src/mgncvtr
+
 ## LANG
 export LANG=ja_JP.UTF-8
 #export LANG=en_US.UTF-8
