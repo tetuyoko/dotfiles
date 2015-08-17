@@ -6,7 +6,7 @@ set noerrorbells
 set modeline
 
 " クリップボード設定
-set clipboard=unnamed
+set clipboard+=unnamed
 
 " TagBar
 nnoremap <silent> ,t :TagbarToggle<CR>
@@ -53,7 +53,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'szw/vim-tags'
-NeoBundle 'vimproc'
+" NeoBundle 'vimproc'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
@@ -70,6 +70,7 @@ NeoBundle 'thinca/vim-ref'
 NeoBundle 'yuku-t/vim-ref-ri'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'kchmck/vim-coffee-script'
 
 " -------------------------------
 " Rsense
@@ -192,6 +193,20 @@ set nowrap
 set bioskey
 set timeout
 set timeoutlen=500
+
+
+" coffee
+" --------------------
+au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+" インデント設定
+autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
+" オートコンパイル
+"保存と同時にコンパイルする
+autocmd BufWritePost *.coffee silent make! 
+"エラーがあったら別ウィンドウで表示
+autocmd QuickFixCmdPost * nested cwindow | redraw! 
+" Ctrl-cで右ウィンドウにコンパイル結果を一時表示する
+nnoremap <silent> <C-C> :CoffeeCompile vert <CR><C-w>h
 
 " brackets
 "inoremap { {}<LEFT>
