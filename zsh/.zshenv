@@ -46,4 +46,4 @@ export LANG=ja_JP.UTF-8
 #export LANG=en_US.UTF-8
 #
 
-$(boot2docker shellinit)
+#$(boot2docker shellinit)

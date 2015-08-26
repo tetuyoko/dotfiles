@@ -13,6 +13,33 @@ nnoremap <silent> ,t :TagbarToggle<CR>
 let g:tagbar_width = 25
 let g:tagbar_updateonsave_maxlines = 10000
 let g:tagbar_sort = 0
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+    \ }
 
 " ステータスライン表示
 set laststatus=2
@@ -70,6 +97,7 @@ NeoBundle 'yuku-t/vim-ref-ri'
 " NeoBundle 'fatih/vim-go'
 NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle "slim-template/vim-slim"
 
 " -------------------------------
 " Rsense
@@ -199,13 +227,14 @@ set timeoutlen=500
 au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 " インデント設定
 autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
+" おそい
 " オートコンパイル
 "保存と同時にコンパイルする
-autocmd BufWritePost *.coffee silent make! 
+" autocmd BufWritePost *.coffee silent make! 
 "エラーがあったら別ウィンドウで表示
-autocmd QuickFixCmdPost * nested cwindow | redraw! 
+"autocmd QuickFixCmdPost * nested cwindow | redraw! 
 " Ctrl-cで右ウィンドウにコンパイル結果を一時表示する
-nnoremap <silent> <C-C> :CoffeeCompile vert <CR><C-w>h
+" nnoremap <silent> <C-C> :CoffeeCompile vert <CR><C-w>h
 
 " brackets
 "inoremap { {}<LEFT>
