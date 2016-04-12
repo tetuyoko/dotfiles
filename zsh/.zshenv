@@ -1,5 +1,8 @@
+# Block of OS X ElCapitan /etc/zshprofile load.
+setopt no_global_rcs
+
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
 
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin
 export PATH=$PATH:/usr/local/mysql/bin
@@ -21,7 +24,7 @@ export PATH=$ANT_ROOT:$PATH
 
 # Android dev environment for MacOS
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
-export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 export ANDROID_HOME=/opt/adt-bundle-mac-x86_64/sdk
 export ANDROID_NDK_ROOT=/opt/android-ndk-r8e
 export PATH=${ANDROID_NDK_ROOT}:$PATH

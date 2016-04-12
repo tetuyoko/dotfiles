@@ -6,7 +6,7 @@
 #alias ls='ls -AF'
 #for mac
 alias so='source'
-alias less='less -R'
+alias less='less -qR'
 alias ls='ls -G'
 alias ll='ls -l -h'
 alias df='df -h'
@@ -19,11 +19,14 @@ alias mv='mv -i'
 alias vi=vim
 alias sc=screen
 alias chrm='open "/Applications/Google Chrome.app" --args --profile-directory="Defalut"'
+alias ctags="`brew --prefix`/bin/ctags"
 
 ## Rails
 alias be='bundle exec'
 alias bes='bundle exec spring'
-alias biv='bundle install --path=vendor/bundle' 
+alias biv='bundle install --path=vendor/bundle --jobs=4' 
+
+alias tailess='less -qR +F log/development.log'
 
 ## global
 alias -g L='| less'
@@ -179,3 +182,4 @@ compinit -u
 
 source $HOME/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(direnv hook zsh)"
+export PATH="/usr/local/bin:$PATH"
