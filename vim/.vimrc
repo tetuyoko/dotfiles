@@ -8,6 +8,9 @@ set modeline
 " クリップボード設定
 set clipboard+=unnamed
 
+" use ctrlp
+"let g:ctrlp_user_command = 'ag %s -l'
+
 " TagBar
 nnoremap <silent> ,t :TagbarToggle<CR>
 let g:tagbar_width = 25
@@ -98,6 +101,17 @@ NeoBundle 'yuku-t/vim-ref-ri'
 NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle "slim-template/vim-slim"
+NeoBundle 'Shougo/unite.vim'
+NeoBundle "ctrlpvim/ctrlp.vim"
+NeoBundle 'Shougo/vimproc.vim', {
+      \ 'build' : {
+      \     'windows' : 'tools\\update-dll-mingw',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make',
+      \     'linux' : 'make',
+      \     'unix' : 'gmake',
+      \    },
+      \ }
 
 " -------------------------------
 " Rsense
@@ -188,7 +202,17 @@ set hlsearch
 :nnoremap <silent><C-n> :NERDTreeCWD<CR>
 :nnoremap <silent><C-a> :NERDTreeClose<CR>
 
-" :nnoremap <F9> :NERDTreeToggle<CR>
+" grep検索
+nnoremap <silent> ,g  :<C-u>Unite grep:.  -buffer-name=search-buffer<CR>
+
+" unite grepにhw(highway)を使う
+if executable('hw')
+  let g:unite_source_grep_command = 'hw'
+  let g:unite_source_grep_default_opts = '--no-group --no-color'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+
+:nnoremap <F9> :NERDTreeToggle<CR>
 
 let g:NERDTreeIgnore=['\.sass-cache', '\.DS_Store','\.bundle$',  '\.git$',  '\.clean$', '\.swp$', '\.bak$', '\~$']
 let g:NERDTreeShowHidden=1
