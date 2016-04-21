@@ -20,6 +20,7 @@ alias vi=vim
 alias sc=screen
 alias chrm='open "/Applications/Google Chrome.app" --args --profile-directory="Defalut"'
 alias ctags="`brew --prefix`/bin/ctags"
+alias hp='history-all | peco'
 
 ## Rails
 alias be='bundle exec'
