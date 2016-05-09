@@ -164,8 +164,6 @@ let g:quickrun_config = {"_" : { "outputter/buffer/into" : 1,}}
 "This is To Use vim-pathogen
 "call pathogen#infect()
 
-runtime macros/editexisting.vim
-
 set nocompatible
 set number
 set ruler
