@@ -103,6 +103,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle "slim-template/vim-slim"
 NeoBundle 'Shougo/unite.vim'
 NeoBundle "ctrlpvim/ctrlp.vim"
+NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
       \     'windows' : 'tools\\update-dll-mingw',
@@ -160,6 +161,11 @@ set splitbelow
 let g:quickrun_config = {'*': {'hook/time/enable': '1'}}
 " buffer出したらカーソルは下部に移動
 let g:quickrun_config = {"_" : { "outputter/buffer/into" : 1,}}
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
+
 
 "This is To Use vim-pathogen
 "call pathogen#infect()
