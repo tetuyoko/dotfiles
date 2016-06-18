@@ -53,6 +53,16 @@ set cmdheight=2
 set wildmode=list:full
 set showcmd
 
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " JavaScript Lint
 if !exists('b:current_compiler')
   compiler jsl
@@ -165,10 +175,6 @@ let g:quickrun_config = {"_" : { "outputter/buffer/into" : 1,}}
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
-
-
-"This is To Use vim-pathogen
-"call pathogen#infect()
 
 set nocompatible
 set number
@@ -315,6 +321,7 @@ autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
 set swapfile
 set directory=~/.vim/swp
 
-"execute pathogen#infect()
+execute pathogen#infect()
+
 syntax on
 filetype plugin indent on
