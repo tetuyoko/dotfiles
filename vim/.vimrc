@@ -97,7 +97,7 @@ NeoBundle 'tpope/vim-endwise'
 " ドキュメント参照
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'yuku-t/vim-ref-ri'
-" NeoBundle 'fatih/vim-go'
+NeoBundle 'fatih/vim-go'
 NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle "slim-template/vim-slim"
@@ -194,6 +194,18 @@ syntax on
 "colorscheme Tomorrow-Night-Blue
 highlight LineNr ctermfg=darkgrey
 
+" au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical
+
 " search
 " --------------------
 set ignorecase
@@ -224,6 +236,25 @@ let g:NERDTreeMinimalUI=1
 let g:NERDTreeDirArrows=0
 let g:NERDTreeMouseMode=2
 
+" go
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:go_list_type = "quickfix"
+
+" 保存時に自動で:Fmtをかける(syntastic関係ない)
+augroup Go
+  autocmd!
+  autocmd BufWritePre *.go GoFmt
+augroup END
+
 " edit
 " --------------------
 set autoindent
@@ -242,6 +273,12 @@ set smarttab
 set shiftwidth=2
 set shiftround
 set nowrap
+
+if expand("%:t") =~ ".*\.go"
+  set noexpandtab
+  set tabstop=4
+  set shiftwidth=4
+endif
 
 " keymap
 " --------------------
@@ -278,6 +315,6 @@ autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
 set swapfile
 set directory=~/.vim/swp
 
-execute pathogen#infect()
+"execute pathogen#infect()
 syntax on
 filetype plugin indent on
