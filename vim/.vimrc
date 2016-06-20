@@ -46,7 +46,7 @@ let g:tagbar_type_go = {
 
 " ステータスライン表示
 set laststatus=2
-set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%{tagbar#currenttag('[%s]','')}%{fugitive#statusline()}%{SyntasticStatuslineFlag()}%{exists('*SkkGetModeStr')?SkkGetModeStr():''}%=%l/%L,%c%V%8P\ 
+set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%{tagbar#currenttag('[%s]','')}%{fugitive#statusline()}%{SyntasticStatuslineFlag()}%{exists('*SkkGetModeStr')?SkkGetModeStr():''}%=%l/%L,%c%V%8P\
 set noshowmode
 set wildmenu
 set cmdheight=2
@@ -273,18 +273,15 @@ set guioptions+=a
 
 " tab
 " --------------------
+
+au BufNewFile,BufRead *.go set noexpandtab tabstop=4 shiftwidth=4
+
 set tabstop=2
 set expandtab
 set smarttab
 set shiftwidth=2
 set shiftround
 set nowrap
-
-if expand("%:e") == "go"
-  set noexpandtab
-  set tabstop=4
-  set shiftwidth=4
-endif
 
 " keymap
 " --------------------
