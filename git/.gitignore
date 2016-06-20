@@ -4,6 +4,11 @@ nbproject
 *.swo
 *.bak
 *.key
-#tags
 *.xccheckout
 
+TAGS
+.TAGS
+!TAGS/
+tags
+.tags
+!tags/

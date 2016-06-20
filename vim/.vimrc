@@ -280,7 +280,7 @@ set shiftwidth=2
 set shiftround
 set nowrap
 
-if expand("%:t") =~ ".*\.go"
+if expand("%:e") == "go"
   set noexpandtab
   set tabstop=4
   set shiftwidth=4
@@ -291,7 +291,6 @@ endif
 set bioskey
 set timeout
 set timeoutlen=500
-
 
 " coffee
 " --------------------
