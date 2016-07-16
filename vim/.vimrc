@@ -58,16 +58,30 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+" エラー行に sign を表示
+let g:syntastic_enable_signs = 1
+" location list を常に更新
+let g:syntastic_always_populate_loc_list = 0
+" location list を常に表示
+let g:syntastic_auto_loc_list = 0
+" ファイルを開いた時にチェックを実行する
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" :wq で終了する時もチェックする
+let g:syntastic_check_on_wq = 0"
+
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:syntastic_mode_map = { 'mode': 'passive',
+      \ 'active_filetypes': ['ruby'] }
+let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+
+let g:syntastic_javascript_checkers=['eslint']
 
 " JavaScript Lint
-if !exists('b:current_compiler')
-  compiler jsl
-endif
-autocmd QuickFixCmdPost make copen
+"if !exists('b:current_compiler')
+"  compiler jsl
+"endif
+"autocmd QuickFixCmdPost make copen
 
 filetype off                   " required!
 
@@ -91,6 +105,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
 NeoBundle 'szw/vim-tags'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
@@ -136,11 +151,6 @@ let g:rsenseHome = '/usr/local/Cellar/rsense/0.3/libexec'
 let g:rsenseUseOmniFunc = 1
 setlocal completefunc=RSenseCompleteFunction
 
-let g:syntastic_mode_map = { 'mode': 'passive',
-            \ 'active_filetypes': ['ruby'] }
-let g:syntastic_ruby_checkers = ['rubocop', 'mri']
- "let g:vimrubocop_config = '.rubocop.yml'
- 
 "let g:livedown_autorun = 0
 "let g:livedown_open = 1
 "let g:livedown_port = 1337
@@ -256,8 +266,8 @@ let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+ "let g:vimrubocop_config = '.rubocop.yml'
+ 
 let g:go_list_type = "quickfix"
 
 " 保存時に自動で:Fmtをかける(syntastic関係ない)
