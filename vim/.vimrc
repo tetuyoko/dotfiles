@@ -124,6 +124,12 @@ NeoBundle 'Shougo/vimproc.vim', {
       \    },
       \ }
 
+NeoBundle 'othree/yajs.vim', {'autoload':{'filetypes':['javascript']}}
+
+autocmd BufRead,BufNewFile *.es6 setfiletype javascript
+
+''
+
 " -------------------------------
 " Rsense
 " -------------------------------
@@ -304,12 +310,12 @@ autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
 " nnoremap <silent> <C-C> :CoffeeCompile vert <CR><C-w>h
 
 " brackets
-"inoremap { {}<LEFT>
-"inoremap [ []<LEFT>
-"inoremap ( ()<LEFT>
-"inoremap " ""<LEFT>
-"inoremap ' ''<LEFT>
-"inoremap <> <><LEFT>
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+inoremap <> <><LEFT>
 
 "backup 
 "set backup
