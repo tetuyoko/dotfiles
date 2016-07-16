@@ -92,7 +92,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'szw/vim-tags'
-" NeoBundle 'vimproc'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
@@ -125,10 +124,10 @@ NeoBundle 'Shougo/vimproc.vim', {
       \ }
 
 NeoBundle 'othree/yajs.vim', {'autoload':{'filetypes':['javascript']}}
+NeoBundle 'posva/vim-vue'
 
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
-''
 
 " -------------------------------
 " Rsense
