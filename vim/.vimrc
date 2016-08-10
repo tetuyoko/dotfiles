@@ -101,49 +101,7 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
-NeoBundle 'szw/vim-tags'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'kien/ctrlp.vim'
-"NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'shime/vim-livedown'
-NeoBundle 'majutsushi/tagbar'
-" 自動で閉じる
-NeoBundle 'tpope/vim-endwise'
-" ドキュメント参照
-NeoBundle 'thinca/vim-ref'
-NeoBundle 'yuku-t/vim-ref-ri'
-NeoBundle 'fatih/vim-go'
-NeoBundle 'elixir-lang/vim-elixir'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle "slim-template/vim-slim"
-NeoBundle 'Shougo/unite.vim'
-NeoBundle "ctrlpvim/ctrlp.vim"
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'Shougo/vimproc.vim', {
-      \ 'build' : {
-      \     'windows' : 'tools\\update-dll-mingw',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make',
-      \     'linux' : 'make',
-      \     'unix' : 'gmake',
-      \    },
-      \ }
-
-NeoBundle 'othree/yajs.vim', {'autoload':{'filetypes':['javascript']}}
-NeoBundle 'posva/vim-vue'
-
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
-
 
 " -------------------------------
 " Rsense
@@ -157,27 +115,7 @@ setlocal completefunc=RSenseCompleteFunction
 "let g:livedown_port = 1337
 noremap gm :call LivedownPreview()<CR>
 
-call neobundle#end()
-
 filetype plugin indent on
-" NeoBundleCheck
-
-" let Vundle manage Vundle
-" required!
-" Bundle 'gmarik/vundle'
-
-" My Bundles here:
-"
-" original repos on github
-"Bundle 'tpope/vim-fugitive'
-"Bundle 'Lokaltog/vim-easymotion'
-"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" vim-scripts repos
-"Bundle 'L9'
-"Bundle 'FuzzyFinder'
-" non github repos
-"Bundle 'git://git.wincent.com/command-t.git'
-"Bundle 'pangloss/vim-javascript'
 
 " vim-quickrun
 " bufferを下部に表示
@@ -323,7 +261,7 @@ let g:neocomplete#sources#dictionary#dictionaries = {
     \ 'default' : '',
     \ 'vimshell' : $HOME.'/.vimshell_hist',
     \ 'scheme' : $HOME.'/.gosh_completions'
-        \ }
+    \ }
 
 " Define keyword.
 if !exists('g:neocomplete#keyword_patterns')
