@@ -112,7 +112,7 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
+"NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'shime/vim-livedown'
@@ -188,9 +188,9 @@ let g:quickrun_config = {'*': {'hook/time/enable': '1'}}
 " buffer出したらカーソルは下部に移動
 let g:quickrun_config = {"_" : { "outputter/buffer/into" : 1,}}
 
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
+"let g:lightline = {
+"      \ 'colorscheme': 'wombat',
+"      \ }
 
 set nocompatible
 set number
