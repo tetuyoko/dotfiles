@@ -19,7 +19,6 @@
 --regex-coffee=/^[ \t]*([ \t][a-z]+)[ \t]*=.*$/\1/v,var/
 --regex-coffee=/^[ \t]*(@[A-Za-z]+)[ \t]*=.*$/\1/i,ivar/
 
-
 --langdef=js
 --langmap=js:.js
 --langmap=js:+.jsx
