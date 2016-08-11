@@ -1,11 +1,3 @@
-#
-#  ███████  ██████░██      ██████  █████ 
-# ░░░░░██  ██░░░░ ░██████ ░░██░░█ ██░░░██
-#     ██  ░░█████ ░██░░░██ ░██ ░ ░██  ░░ 
-#    ██    ░░░░░██░██  ░██ ░██   ░██   ██
-#   ██████ ██████ ░██  ░██░███   ░░█████ 
-#  ░░░░░░ ░░░░░░  ░░   ░░ ░░░     ░░░░░  
-#
 # █▓▒░ setopt
 setopt no_global_rcs      # Block of OS X ElCapitan /etc/zshprofile load.
 setopt AUTO_CD            # less cd only directory
