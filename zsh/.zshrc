@@ -27,6 +27,8 @@ cd `cat ~/.curdir`
 compinit -u
 umask 002
 
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh ]]
+
 eval "$(direnv hook zsh)"
 eval "$(rbenv init - zsh)"
 
