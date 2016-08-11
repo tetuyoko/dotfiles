@@ -13,4 +13,3 @@ set blame-view = \
 set pager-view = line-number:yes,interval=10 text
 
 set tree-view = line-number:yes
-
