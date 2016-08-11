@@ -58,9 +58,9 @@ umask 002
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
-bindkey "^N" history-beginning-search-forward-end
-bindkey "^R" history-incremental-pattern-search-backward
-bindkey "^S" history-incremental-pattern-search-forward
+#bindkey "^N" history-beginning-search-forward-end
+#bindkey "^R" history-incremental-pattern-search-backward
+#bindkey "^S" history-incremental-pattern-search-forward
 
 ## Command history configuration
 HISTFILE=~/.zsh_history
@@ -161,9 +161,18 @@ if exists peco; then
     zle -R -c               # refresh
   }
 
+
   zle -N peco_select_history
+
   bindkey '^R' peco_select_history
 fi
+
+function clear_line() {
+  clear
+  zle reset-prompt
+}
+zle -N clear_line
+bindkey '^K' clear_line
 
 function history-all { history -E 1 }
 
