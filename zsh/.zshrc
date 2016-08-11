@@ -8,15 +8,27 @@
 #
 # █▓▒░ load configs
 for config (~/.zsh/*.zsh) source $config
+source $HOME/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-## Keybind
-bindkey -v # vim bind
-umask 002
-
-## historical backward/forward search with linehead string binded to ^P/^N
+# vim bind
+bindkey -v
 
 fpath=($HOME/zsh/functions/cd-gitroot(N-/) $fpath)
 fpath=($HOME/zsh/functions/zsh-completions/src(N-/) $fpath)
+
+zle -N cdup
+zle -N clear_line
+bindkey '^K' clear_line
+
+unalias run-help
+HELPDIR=/usr/local/share/zsh/help
+
+cd `cat ~/.curdir`
+compinit -u
+umask 002
+
+eval "$(direnv hook zsh)"
+eval "$(rbenv init - zsh)"
 
 #############################################
 ## function
@@ -51,26 +63,3 @@ function clear_line() {
 }
 
 function history-all { history -E 1 }
-
-zle -N cdup
-zle -N clear_line
-autoload -Uz cd-gitroot
-bindkey '^K' clear_line
-
-unalias run-help
-autoload run-help
-HELPDIR=/usr/local/share/zsh/help
-
-cd `cat ~/.curdir`
-
-# zmv -W '*.html' '*.txt'
-autoload -Uz zmv
-alias zmv='noglob zmv -W'
-
-autoload -Uz compinit
-compinit -u
-
-source $HOME/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-eval "$(direnv hook zsh)"
-eval "$(rbenv init - zsh)"
