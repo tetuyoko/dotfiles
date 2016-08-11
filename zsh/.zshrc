@@ -19,6 +19,7 @@ fpath=($HOME/zsh/functions/zsh-completions/src(N-/) $fpath)
 zle -N cdup
 zle -N clear_line
 bindkey '^K' clear_line
+bindkey '^R' peco_select_history
 
 unalias run-help
 HELPDIR=/usr/local/share/zsh/help
