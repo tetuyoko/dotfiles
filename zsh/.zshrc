@@ -46,40 +46,6 @@ setopt IGNORE_EOF # ^Dでzshを終了しない
 setopt NO_FLOW_CONTROL # ^Q/^Sのフローコントロールを無効にする
 
 #############################################
-## PROMPT
-#############################################
-
-## PROMPT
-local pinfo="%n@%m${WINDOW:+"[$WINDOW]"}"
-local pdir="%B%F{blue}%1~%f%b"
-local pmark="%B%(?,%F{gray},%F{red})%(!.%%.%%)%f%b"
-PROMPT="[$pinfo $pdir] $pmark "
-
-## SPROMPT
-SPROMPT="%{%F{red}correct%f%{$reset_color%}: %R -> %r ?(ynae) "
-
-## RPROMPT
-# VCS settings
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' formats '(%b)'
-zstyle ':vcs_info:*' actionformats '(%b|%a)'
-
-#. /usr/local/bin/autojump
-
-precmd() {
-  psvar=()
-  LANG=en_US.UTF-8 vcs_info
-   [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
-
-   pwd=`pwd`
-   #echo "[^[[35m$pwd^[[m]"
-   #autojump -a $pwd
-   echo $pwd > ~/.curdir
-}
-
-RPROMPT="%1(v|%F{green}%1v%f|)"
-
-#############################################
 ## function
 #############################################
 autoload -Uz cd-gitroot
