@@ -1,54 +1,13 @@
-#############################################
-# aliases
-#############################################
-
-## basics
-#alias ls='ls -AF'
-#for mac
-alias so='source'
-alias less='less -qR'
-alias ls='ls -G'
-alias ll='ls -l -h'
-alias df='df -h'
-alias du='du -h'
-alias sdif='svn diff . | /usr/share/vim/vim73/macros/less.sh'
-alias svnlog='svn log -v -r {2012-12-25}:HEAD'
-alias grep='grep --color=auto'
-#alias rm='rmtrash'
-alias mv='mv -i'
-alias vi=vim
-alias sc=screen
-alias chrm='open "/Applications/Google Chrome.app" --args --profile-directory="Defalut"'
-alias ctags="`brew --prefix`/bin/ctags"
-alias hp='history-all | peco'
-
-## Rails
-alias be='bundle exec'
-alias bes='bundle exec spring'
-alias biv='bundle install --path=vendor/bundle --jobs=4' 
-
-alias tailess='less -qR +F log/development.log'
-
-## global
-alias -g L='| less'
-alias -g G='| grep'
-alias -g H='| head'
-alias -g N='> /dev/null'
-
-## use GNU readlink
-alias readlink=greadlink
-
-#alias git-archive='git archive --format=tar HEAD | gzip > foo.tar.gz'
-
-## search
-#alias rgrep="rgrep -R"
-#alias rgrepsvn="rgrep --exclude=\"*.svn*\""
-
-alias gd='dirs -v; echo -n "select number: "; read newdir; cd +"$newdir"'
-
-#############################################
-# zsh
-#############################################
+#
+#  ███████  ██████░██      ██████  █████ 
+# ░░░░░██  ██░░░░ ░██████ ░░██░░█ ██░░░██
+#     ██  ░░█████ ░██░░░██ ░██ ░ ░██  ░░ 
+#    ██    ░░░░░██░██  ░██ ░██   ░██   ██
+#   ██████ ██████ ░██  ░██░███   ░░█████ 
+#  ░░░░░░ ░░░░░░  ░░   ░░ ░░░     ░░░░░  
+#
+# █▓▒░ load configs
+for config (~/.zsh/*.zsh) source $config
 
 ## Keybind
 bindkey -v # vim bind
@@ -120,9 +79,7 @@ RPROMPT="%1(v|%F{green}%1v%f|)"
 #############################################
 ## function
 #############################################
-
 autoload -Uz cd-gitroot
-alias cdu='cd-gitroot'
 
 # % zman SHARE_HISTORY
 function zman() {
