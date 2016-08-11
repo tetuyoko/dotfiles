@@ -1,20 +1,20 @@
-# Block of OS X ElCapitan /etc/zshprofile load.
-setopt no_global_rcs
+#                 ██      
+#                ░██      
+#  ██████  ██████░██      
+# ░░░░██  ██░░░░ ░██████  
+#    ██  ░░█████ ░██░░░██ 
+#   ██    ░░░░░██░██  ░██ 
+#  ██████ ██████ ░██  ░██ 
+# ░░░░░░ ░░░░░░  ░░   ░░  
+#
+#█▓▒░ env
 
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init - zsh)"
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/local/mysql/bin
 
-export PATH=$PATH:/usr/local/sbin:/usr/local/bin
-export PATH=$PATH:/usr/local/mysql/bin
-
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/tetuyoko/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-
-#export V_TARGET_ID="android-16"
-export V_TARGET_ID="android-14"
+export V_TARGET_ID="android-16"
 export IPHONE_SIM=~/Library/Application\ Support/iPhone\ Simulator
-# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+
 export COCOS_CONSOLE_ROOT=/Users/yokoyama_tetsuro/cocos2d-x-3.2/tools/cocos2d-console/bin
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
@@ -35,18 +35,12 @@ export NDK_ROOT=${ANDROID_NDK_ROOT}
 export NDK_CCACHE=`which ccache`
 export ANDROID_SDK_ROOT=${ANDROID_HOME}
 
-# golang
- #export GOROOT=$HOME/go
- #export PATH=$PATH:$GOROOT/bin
+#█▓▒░  golang
 export GOPATH=$HOME/gocode
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
-
 export MGNCV=/Users/tetuyoko/gocode/src/mgncvtr
 
 ## LANG
 export LANG=ja_JP.UTF-8
 #export LANG=en_US.UTF-8
-#
-
-#$(boot2docker shellinit)

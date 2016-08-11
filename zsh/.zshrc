@@ -9,6 +9,9 @@
 # █▓▒░ load configs
 for config (~/.zsh/*.zsh) source $config
 
+# Block of OS X ElCapitan /etc/zshprofile load.
+setopt no_global_rcs
+
 ## Keybind
 bindkey -v # vim bind
 umask 002
@@ -145,8 +148,8 @@ alias zmv='noglob zmv -W'
 
 autoload -Uz compinit
 compinit -u
-#compinit -u
 
 source $HOME/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 eval "$(direnv hook zsh)"
-export PATH="/usr/local/bin:$PATH"
+eval "$(rbenv init - zsh)"
