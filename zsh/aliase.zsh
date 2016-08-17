@@ -35,6 +35,8 @@ alias -g G='| grep'
 alias -g H='| head'
 alias -g N='> /dev/null'
 
+alias tmux="TERM=screen-256color-bce tmux"
+
 # nullpointer url shortener
 short() {
   curl -F"shorten=$*" https://0x0.st
