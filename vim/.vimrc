@@ -71,8 +71,7 @@ let g:syntastic_check_on_wq = 0"
 
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-let g:syntastic_mode_map = { 'mode': 'passive',
-      \ 'active_filetypes': ['ruby'] }
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 
 let g:syntastic_javascript_checkers=['eslint']
@@ -91,15 +90,6 @@ noremap \ ,
 
 " Ctrpで0番レジスタを呼ぶ
 vnoremap <silent> <C-p> "0p<CR>
-
-" set rtp+=~/.vim/bundle/vundle/
-" call vundle#rc()
-
-" Neobundle set up
-if has('vim_starting')
-  set nocompatible
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
 
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
@@ -348,7 +338,6 @@ if &runtimepath !~# '/dein.vim'
   endif
   execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
-
 
 " 設定開始
 if dein#load_state(s:dein_dir)
