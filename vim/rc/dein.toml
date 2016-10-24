@@ -4,9 +4,9 @@ repo = 'Shougo/dein.vim'
 repo = 'Shougo/neosnippet.vim'
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
-[[plugins]]
-repo = 'Shougo/vimshell'
-rev  = '3787e5'
+#[[plugins]]
+#repo = 'Shougo/vimshell'
+#rev  = '3787e5'
 [[plugins]]
 repo = 'scrooloose/syntastic'
 [[plugins]]
@@ -29,8 +29,8 @@ repo = 'kien/ctrlp.vim'
 repo = 'scrooloose/nerdtree'
 [[plugins]]
 repo = 'tpope/vim-rails'
-[[plugins]]
-repo = 'shime/vim-livedown'
+#[[plugins]]
+#repo = 'shime/vim-livedown'
 [[plugins]]
 repo = 'majutsushi/tagbar'
 [[plugins]]
@@ -84,3 +84,5 @@ repo = 'osyo-manga/vim-precious'
 depends = ['context_filetype.vim']
 [[plugins]]
 repo = 'Shougo/context_filetype.vim'
+[[plugins]]
+repo = 'digitaltoad/vim-pug'

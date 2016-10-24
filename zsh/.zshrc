@@ -32,6 +32,7 @@ umask 002
 
 eval "$(direnv hook zsh)"
 eval "$(rbenv init - zsh)"
+eval "$(pyenv init -)"
 
 #############################################
 ## function
@@ -66,3 +67,8 @@ function clear_line() {
 }
 
 function history-all { history -E 1 }
+
+export PATH="$HOME/.yarn/bin:$PATH"
+
+### Added by IBM Bluemix CLI
+source /usr/local/Bluemix/bx/zsh_autocomplete
