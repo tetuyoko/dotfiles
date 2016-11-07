@@ -1,10 +1,10 @@
 set commit-order = topo         # Order commits topologically
 set git-colors = yes
+set date-local = yes
 set blame-options = -C -C -C 
 set reference-format = (branch) <tag>
 
 set blame-view = \
-        date:local\
         author:abbreviated \
         file-name:auto \
         id:yes,color \
