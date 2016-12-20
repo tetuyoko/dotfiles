@@ -55,6 +55,8 @@ repo = 'Shougo/unite.vim'
 repo = "ctrlpvim/ctrlp.vim"
 [[plugins]]
 repo = 'itchyny/lightline.vim'
+#[[plugins]]
+#repo = 'davidhalter/jedi-vim'
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 hook_post_update = '''

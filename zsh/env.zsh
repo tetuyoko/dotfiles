@@ -40,6 +40,8 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 export CUDA_HOME=/usr/local/cuda
 export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
 export PATH="$CUDA_HOME/bin:$PATH"
+#export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
+export TENSOR_PATH="/usr/local/var/pyenv/versions/3.5.2/lib/python3.5/site-packages/tensorflow"
 
 ## LANG
 export LANG=ja_JP.UTF-8

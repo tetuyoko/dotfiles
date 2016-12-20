@@ -25,6 +25,8 @@ alias tree='tree -CAFa -I "CVS|*.*.package|.svn|.git|.hg|node_modules|bower_comp
 alias disks='echo "╓───── m o u n t . p o i n t s"; echo "╙────────────────────────────────────── ─ ─ "; diskutil list; echo ""; echo "╓───── d i s k . u s a g e"; echo "╙────────────────────────────────────── ─ ─ "; df -h;'
 alias record="ffmpeg -f x11grab -s 1366x768 -an -r 16 -loglevel quiet -i :0.0 -b:v 5M -y" #pass a filename
 
+alias ssh-add='ssh-add -K'
+
 #███████▓▒░ rails
 alias be='bundle exec'
 alias biv='bundle install --path=vendor/bundle --jobs=4' 
