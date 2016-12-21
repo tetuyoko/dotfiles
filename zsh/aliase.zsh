@@ -3,8 +3,8 @@
 #███████▓▒░ basic
 alias so='source'
 alias less='less -qR'
-alias ll="ls -l -h"
-alias ls="ls -G"
+alias ll="ls -lh"
+alias ls="ls -Gh"
 alias df='df -h'
 alias du='du -h'
 alias grep='grep --color=auto'
