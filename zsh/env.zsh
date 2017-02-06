@@ -2,6 +2,8 @@
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/local/mysql/bin
+# `yarn global bin`
+export PATH=$PATH:/usr/local/Cellar/node/7.4.0/bin
 
 export V_TARGET_ID="android-16"
 export IPHONE_SIM=~/Library/Application\ Support/iPhone\ Simulator

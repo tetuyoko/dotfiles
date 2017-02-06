@@ -12,6 +12,8 @@ repo = 'scrooloose/syntastic'
 [[plugins]]
 repo = 'pmsorhaindo/syntastic-local-eslint.vim'
 [[plugins]]
+repo = 'gcorne/vim-sass-lint'
+[[plugins]]
 repo = 'szw/vim-tags'
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
