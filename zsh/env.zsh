@@ -17,12 +17,19 @@ export PATH=$ANT_ROOT:$PATH
 
 # Android dev environment for MacOS
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
-export ANDROID_HOME=/opt/adt-bundle-mac-x86_64/sdk
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export ANDROID_NDK_ROOT=/opt/android-ndk-r8e
-export PATH=${ANDROID_NDK_ROOT}:$PATH
-export PATH=${ANDROID_HOME}/platform-tools:$PATH
-export PATH=${ANDROID_HOME}/tools:$PATH
+
+# React-Native
+export ANDROID_HOME=${HOME}/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
+# Android
+#export ANDROID_HOME=/opt/adt-bundle-mac-x86_64/sdk
+#export PATH=${ANDROID_NDK_ROOT}:$PATH
+#export PATH=${ANDROID_HOME}/platform-tools:$PATH
+#export PATH=${ANDROID_HOME}/tools:$PATH
 
 export NDK_ROOT=${ANDROID_NDK_ROOT} 
 export NDK_CCACHE=`which ccache`

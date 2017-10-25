@@ -38,3 +38,5 @@
 	program = gpg1
 [user]
 	signingkey = 1588D06C
+	name = tetuyoko
+	email = tyokoyama53@gmail.com

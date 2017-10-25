@@ -15,6 +15,8 @@ set clipboard+=unnamed
 " use ctrlp
 "let g:ctrlp_user_command = 'ag %s -l'
 
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
 " TagBar
 nnoremap <silent> ,t :TagbarToggle<CR>
 let g:tagbar_width = 25

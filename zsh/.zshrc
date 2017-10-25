@@ -20,7 +20,6 @@ zle -N cdup
 zle -N clear_line
 bindkey '^K' clear_line
 bindkey '^R' peco_select_history
-
 unalias run-help
 HELPDIR=/usr/local/share/zsh/help
 
@@ -72,3 +71,7 @@ export PATH="$HOME/.yarn/bin:$PATH"
 
 ### Added by IBM Bluemix CLI
 source /usr/local/Bluemix/bx/zsh_autocomplete
+
+ssh-add ~/.ssh/github/id_rsa
+ssh-add ~/.ssh/fujossy/fujossy.pem
+

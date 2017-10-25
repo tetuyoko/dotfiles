@@ -90,3 +90,5 @@ depends = ['context_filetype.vim']
 repo = 'Shougo/context_filetype.vim'
 [[plugins]]
 repo = 'digitaltoad/vim-pug'
+[[plugins]]
+repo = 'mxw/vim-jsx'
