@@ -45,6 +45,11 @@ export MGNCV=/Users/tetuyoko/gocode/src/mgncvtr
 export PYENV_ROOT=/usr/local/var/pyenv
 export PATH="$PYENV_ROOT/bin:$PATH"
 
+#█▓▒░  rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+export PATH="$PYENV_ROOT/bin:$PATH"
+
 #█▓▒░  tensorflow
 export CUDA_HOME=/usr/local/cuda
 export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"

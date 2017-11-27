@@ -1,4 +1,6 @@
 [[plugins]]
+repo = 'vim-scripts/mru.vim'
+[[plugins]]
 repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
