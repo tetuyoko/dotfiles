@@ -1,9 +1,9 @@
 #█▓▒░ env
-
+export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/local/mysql/bin
 # `yarn global bin`
-export PATH=$PATH:/usr/local/Cellar/node/7.4.0/bin
+export PATH=$PATH:/usr/local/Cellar/node/9.5.0/bin
 
 export V_TARGET_ID="android-16"
 export IPHONE_SIM=~/Library/Application\ Support/iPhone\ Simulator
@@ -41,13 +41,11 @@ export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export MGNCV=/Users/tetuyoko/gocode/src/mgncvtr
 
-#█▓▒░  python
-export PYENV_ROOT=/usr/local/var/pyenv
-export PATH="$PYENV_ROOT/bin:$PATH"
+#█▓▒░  react
+export REACT_EDITOR=atom
 
 #█▓▒░  rust
 export PATH="$HOME/.cargo/bin:$PATH"
-
 export PATH="$PYENV_ROOT/bin:$PATH"
 
 #█▓▒░  tensorflow

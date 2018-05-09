@@ -31,6 +31,9 @@ alias ssh-add='ssh-add -K'
 alias be='bundle exec'
 alias biv='bundle install --path=vendor/bundle --jobs=4' 
 
+#███████▓▒░ python
+alias python='python3'
+
 #███████▓▒░ pipe
 alias -g L='| less'
 alias -g G='| grep'
