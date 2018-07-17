@@ -172,9 +172,9 @@ set wrapscan
 set hlsearch
 :nnoremap <ESC><ESC> :nohlsearch<CR>
 :nnoremap <F9> :NERDTreeToggle<CR>
-":nnoremap <silent><C-n> :NERDTreeToggle<CR>
-:nnoremap <silent><C-n> :NERDTreeCWD<CR>
-:nnoremap <silent><C-a> :NERDTreeClose<CR>
+:nnoremap <silent><C-n> :NERDTreeToggle<CR>
+" :nnoremap <silent><C-n> :NERDTreeCWD<CR>
+" :nnoremap <silent><C-a> :NERDTreeClose<CR>
 
 " grep検索
 nnoremap <silent> ,g  :<C-u>Unite grep:.  -buffer-name=search-buffer<CR>
@@ -338,6 +338,7 @@ endif
 
 let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " dein.vim install
 if &runtimepath !~# '/dein.vim'
