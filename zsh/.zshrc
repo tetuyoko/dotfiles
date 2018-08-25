@@ -82,3 +82,8 @@ ssh-add ~/.ssh/fujossy/fujossy.pem
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/tetuyoko/test/chromeless/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/tetuyoko/test/chromeless/serverless/node_modules/tabtab/.completions/sls.zsh
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/tetuyoko/test/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/tetuyoko/test/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/tetuyoko/test/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/tetuyoko/test/google-cloud-sdk/completion.zsh.inc'; fi
