@@ -1,0 +1,6 @@
+inoremap jk <ESC>
+noremap ; :
+noremap : ;
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap <> <><LEFT>
