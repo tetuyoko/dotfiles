@@ -43,3 +43,5 @@
 	signingkey = 1588D06C
 	name = tetuyoko
 	email = tyokoyama53@gmail.com
+[credential]
+	helper = osxkeychain

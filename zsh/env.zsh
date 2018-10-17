@@ -55,6 +55,9 @@ export PATH="$CUDA_HOME/bin:$PATH"
 #export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
 export TENSOR_PATH="/usr/local/var/pyenv/versions/3.5.2/lib/python3.5/site-packages/tensorflow"
 
+# Aws Session Manager Plugin
+export PATH=$PATH:/usr/local/sessionmanagerplugin/bin
+
 ## LANG
 export LANG=ja_JP.UTF-8
 #export LANG=en_US.UTF-8
