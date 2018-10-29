@@ -7,7 +7,7 @@
 # ░░░░░░ ░░░░░░  ░░   ░░  
 #
 # █▓▒░ load configs
-for config (~/.zsh/*.zsh) source $config
+for config (~/.zsh/**/*.zsh) source $config
 source $HOME/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # vim bind
