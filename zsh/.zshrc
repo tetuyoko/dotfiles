@@ -69,21 +69,17 @@ function history-all { history -E 1 }
 
 export PATH="$HOME/.yarn/bin:$PATH"
 
-### Added by IBM Bluemix CLI
-source /usr/local/Bluemix/bx/zsh_autocomplete
-
 ssh-add ~/.ssh/github/id_rsa
-ssh-add ~/.ssh/fujossy/fujossy.pem
-
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/tetuyoko/test/chromeless/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/tetuyoko/test/chromeless/serverless/node_modules/tabtab/.completions/serverless.zsh
+# [[ -f /Users/tetuyoko/test/chromeless/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/tetuyoko/test/chromeless/serverless/node_modules/tabtab/.completions/serverless.zsh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/tetuyoko/test/chromeless/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/tetuyoko/test/chromeless/serverless/node_modules/tabtab/.completions/sls.zsh
+#[[ -f /Users/tetuyoko/test/chromeless/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/tetuyoko/test/chromeless/serverless/node_modules/tabtab/.completions/sls.zsh
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/tetuyoko/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tetuyoko/google-cloud-sdk/path.zsh.inc'; fi
-
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/tetuyoko/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tetuyoko/google-cloud-sdk/completion.zsh.inc'; fi
+
+source <(kubectl completion zsh)
