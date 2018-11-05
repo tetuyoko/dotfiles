@@ -83,3 +83,4 @@ if [ -f '/Users/tetuyoko/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tetuyo
 if [ -f '/Users/tetuyoko/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tetuyoko/google-cloud-sdk/completion.zsh.inc'; fi
 
 source <(kubectl completion zsh)
+export PATH="/usr/local/opt/gettext/bin:$PATH"

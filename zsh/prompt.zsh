@@ -14,6 +14,7 @@ local pdir="%B%F{blue}%1~%f%b"
 local pmark="%B%(?,%F{gray},%F{red})%(!.%%.%%)%f%b"
 PROMPT="${USER_LEVEL}[$pinfo $pdir] $pmark "
 
+
 ## SPROMPT
 SPROMPT="%{%F{red}correct%f%{$reset_color%}: %R -> %r ?(ynae) "
 
@@ -37,6 +38,10 @@ precmd() {
 
 RPROMPT="%1(v|%F{green}%1v%f|)"
 
+autoload -U colors; colors
+#RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
+#RPROMPT='$ZSH_KUBECTL_PROMPT'
+
 #█▓▒░ allow functions in the prompt
 setopt PROMPT_SUBST
 
@@ -52,4 +57,5 @@ typeset -ga chpwd_functions
 #█▓▒░ prepend git functions needed for prompt
 preexec_functions+='preexec_update_git_vars'
 precmd_functions+='precmd_update_git_vars'
+precmd_functions+='_zsh_kubectl_prompt_precmd'
 chpwd_functions+='chpwd_update_git_vars'

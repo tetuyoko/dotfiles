@@ -14,7 +14,7 @@ export PATH=$COCOS_CONSOLE_ROOT:$PATH
 # Add environment variable ANT_ROOT for cocos2d-x
 export ANT_ROOT=/usr/local/Cellar/ant/1.9.3/libexec/bin
 export PATH=$ANT_ROOT:$PATH
-export PATH=/usr/local/bin:/usr/bin
+export PATH=$PATH:/usr/sbin/:/usr/local/bin:/usr/bin
 
 # Android dev environment for MacOS
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
