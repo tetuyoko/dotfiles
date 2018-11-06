@@ -2,6 +2,7 @@
 #
 #███████▓▒░ basic
 alias so='source'
+
 alias less='less -qR'
 alias ll="ls -lh"
 alias ls="ls -Gh"
