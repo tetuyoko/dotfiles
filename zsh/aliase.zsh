@@ -3,6 +3,7 @@
 #███████▓▒░ basic
 alias so='source'
 
+alias kc='kubectl'
 alias less='less -qR'
 alias ll="ls -lh"
 alias ls="ls -Gh"
