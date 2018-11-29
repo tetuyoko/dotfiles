@@ -40,6 +40,7 @@ alias python='python3'
 alias -g L='| less'
 alias -g G='| grep'
 alias -g H='| head'
+alias -g P='| peco'
 alias -g N='> /dev/null'
 
 alias tmux="TERM=screen-256color-bce tmux"

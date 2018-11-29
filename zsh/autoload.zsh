@@ -5,3 +5,4 @@ autoload -Uz zmv
 autoload -Uz compinit
 
 source <(kubesec completion zsh)
+source <(helm completion zsh)
