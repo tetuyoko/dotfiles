@@ -22,6 +22,7 @@ bindkey '^K' clear_line
 bindkey '^R' peco_select_history
 bindkey '^E' peco-cdr
 bindkey '^G' gconf
+bindkey '^O' git-checkout
 unalias run-help
 HELPDIR=/usr/local/share/zsh/help
 
