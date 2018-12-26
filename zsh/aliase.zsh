@@ -34,7 +34,7 @@ alias be='bundle exec'
 alias biv='bundle install --path=vendor/bundle --jobs=4' 
 
 #███████▓▒░ python
-alias python='python3'
+#alias python='python3'
 
 #███████▓▒░ pipe
 alias -g L='| less'
@@ -43,7 +43,8 @@ alias -g H='| head'
 alias -g P='| peco'
 alias -g N='> /dev/null'
 
-alias tmux="TERM=screen-256color-bce tmux"
+#alias tmux="TERM=screen-256color-bce tmux"
+eval "$(hub alias -s)"
 
 # nullpointer url shortener
 short() {
