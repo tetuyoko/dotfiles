@@ -8,3 +8,4 @@ function gconf() {
     gcloud config configurations list | grep "${config}"
   fi
 }
+zle -N gconf

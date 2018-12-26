@@ -20,6 +20,8 @@ zle -N cdup
 zle -N clear_line
 bindkey '^K' clear_line
 bindkey '^R' peco_select_history
+bindkey '^E' peco-cdr
+bindkey '^G' gconf
 unalias run-help
 HELPDIR=/usr/local/share/zsh/help
 
@@ -77,5 +79,8 @@ if [ -f '/Users/tetuyoko/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tetuyo
 if [ -f '/Users/tetuyoko/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tetuyoko/google-cloud-sdk/completion.zsh.inc'; fi
 
 source <(kubectl completion zsh)
+source <(kubesec completion zsh)
+#source <(helm completion zsh)
+
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
