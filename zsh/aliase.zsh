@@ -6,7 +6,8 @@ alias so='source'
 alias kc='kubectl'
 alias less='less -qR'
 alias ll="ls -lh"
-alias ls="ls -Gh"
+#alias ls="ls -Gh"
+alias ls='gls --color=auto'
 alias df='df -h'
 alias du='du -h'
 alias grep='grep --color=auto'
@@ -16,6 +17,7 @@ alias vi=vim
 alias sc=screen
 alias chrm='open "/Applications/Google Chrome.app" --args --profile-directory="Defalut"'
 alias ctags="`brew --prefix`/bin/ctags"
+#alias node='node --expose_gc --optimize_for_size --max_old_space_size=4096 --gc_interval=100'
 
 alias hp='history-all | peco'
 alias tailess='less -qR +F log/development.log'
