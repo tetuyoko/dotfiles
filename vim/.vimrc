@@ -136,7 +136,7 @@ set title
 set linespace=0
 set wildmenu
 set showcmd
-set textwidth=72
+set textwidth=120
 "set textwidth=78
 "set columns=100
 "set lines=150
