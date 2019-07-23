@@ -12,6 +12,37 @@ set modeline
 " クリップボード設定
 set clipboard+=unnamed
 
+" Lightline
+let g:lightline = {
+      \  'colorscheme': 'jellybeans',
+      \  'active': {
+      \    'left': [
+      \      ['mode', 'paste'],
+      \      ['readonly', 'filename', 'modified', 'ale'],
+      \    ]
+      \  },
+      \  'component_function': {
+      \    'ale': 'ALEGetStatusLine'
+      \  }
+      \}
+let g:lightline.component_expand = {
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
+      \ }
+let g:lightline.component_type = {
+      \  'linter_checking': 'left',
+      \  'linter_warnings': 'warning',
+      \  'linter_errors': 'error',
+      \  'linter_ok': 'left',
+      \ }
+let g:lightline.active = {
+      \  'right': [
+      \    [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]
+      \   ]
+      \ }
+
 " use ctrlp
 "let g:ctrlp_user_command = 'ag %s -l'
 
@@ -59,37 +90,6 @@ set cmdheight=2
 set wildmode=list:full
 set showcmd
 
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-" エラー行に sign を表示
-let g:syntastic_enable_signs = 1
-" location list を常に更新
-let g:syntastic_always_populate_loc_list = 0
-" location list を常に表示
-let g:syntastic_auto_loc_list = 0
-" ファイルを開いた時にチェックを実行する
-let g:syntastic_check_on_open = 1
-" :wq で終了する時もチェックする
-let g:syntastic_check_on_wq = 0"
-
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
-let g:syntastic_ruby_checkers = ['rubocop', 'mri']
-let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_python_python_exec = '/usr/local/var/pyenv/shims/python3'
-let g:syntastic_sass_checkers = ["sasslint"]
-let g:syntastic_scss_checkers = ["sasslint"]
-
-" JavaScript Lint
-"if !exists('b:current_compiler')
-"  compiler jsl
-"endif
-"autocmd QuickFixCmdPost make copen
-
 filetype off                   " required!
 
 inoremap jk <ESC>
@@ -123,10 +123,6 @@ set splitbelow
 let g:quickrun_config = {'*': {'hook/time/enable': '1'}}
 " buffer出したらカーソルは下部に移動
 let g:quickrun_config = {"_" : { "outputter/buffer/into" : 1,}}
-
-"let g:lightline = {
-"      \ 'colorscheme': 'wombat',
-"      \ }
 
 set nocompatible
 set number

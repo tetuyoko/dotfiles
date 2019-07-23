@@ -7,11 +7,11 @@ repo = 'Shougo/neosnippet.vim'
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 [[plugins]]
-repo = 'scrooloose/syntastic'
+repo = 'itchyny/lightline.vim'
 [[plugins]]
-repo = 'pmsorhaindo/syntastic-local-eslint.vim'
+repo = 'maximbaz/lightline-ale'
 [[plugins]]
-repo = 'gcorne/vim-sass-lint'
+repo = 'w0rp/ale'
 [[plugins]]
 repo = 'szw/vim-tags'
 [[plugins]]
@@ -37,8 +37,6 @@ repo = 'tpope/vim-endwise'
 # ドキュメント参照
 repo = 'thinca/vim-ref'
 [[plugins]]
-repo = 'yuku-t/vim-ref-ri'
-[[plugins]]
 repo = 'fatih/vim-go'
 [[plugins]]
 repo = 'elixir-lang/vim-elixir'
@@ -50,8 +48,6 @@ repo = "slim-template/vim-slim"
 repo = 'Shougo/unite.vim'
 [[plugins]]
 repo = "ctrlpvim/ctrlp.vim"
-[[plugins]]
-repo = 'itchyny/lightline.vim'
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
