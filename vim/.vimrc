@@ -12,6 +12,11 @@ set modeline
 " クリップボード設定
 set clipboard+=unnamed
 
+" ALE
+let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
+let g:ale_fix_on_save = 1
+let g:ale_completion_enabled = 1
+
 " Lightline
 let g:lightline = {
       \  'colorscheme': 'jellybeans',
@@ -32,13 +37,13 @@ let g:lightline.component_expand = {
       \  'linter_ok': 'lightline#ale#ok',
       \ }
 let g:lightline.component_type = {
-      \  'linter_checking': 'left',
+      \  'linter_checking': 'right',
       \  'linter_warnings': 'warning',
       \  'linter_errors': 'error',
-      \  'linter_ok': 'left',
+      \  'linter_ok': 'right',
       \ }
 let g:lightline.active = {
-      \  'right': [
+      \  'left': [
       \    [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]
       \   ]
       \ }
