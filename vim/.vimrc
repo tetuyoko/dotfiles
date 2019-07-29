@@ -12,11 +12,6 @@ set modeline
 " クリップボード設定
 set clipboard+=unnamed
 
-" ALE
-let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
-let g:ale_fix_on_save = 1
-let g:ale_completion_enabled = 1
-
 " Lightline
 let g:lightline = {
       \  'colorscheme': 'jellybeans',
@@ -48,10 +43,15 @@ let g:lightline.active = {
       \   ]
       \ }
 
+" ALE
+let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
+let g:ale_fix_on_save = 1
+let g:ale_completion_enabled = 1
+
 " use ctrlp
 "let g:ctrlp_user_command = 'ag %s -l'
 
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+let g:jsx_ext_required = 1 " Allow JSX in normal JS files
 
 " TagBar
 nnoremap <silent> ,t :TagbarToggle<CR>
