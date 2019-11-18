@@ -33,7 +33,7 @@ alias ssh-add='ssh-add -K'
 
 #███████▓▒░ rails
 alias be='bundle exec'
-alias biv='bundle install --path=vendor/bundle --jobs=4' 
+alias biv='bundle install --path=vendor/bundle --jobs $(nproc)'
 
 #███████▓▒░ python
 #alias python='python3'
