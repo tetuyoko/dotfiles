@@ -22,4 +22,3 @@ augroup Go
   autocmd!
   autocmd BufWritePre *.go GoFmt
 augroup END
-

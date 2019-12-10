@@ -42,8 +42,6 @@ setlocal completefunc=RSenseCompleteFunction
 "let g:livedown_port = 1337
 noremap gm :call LivedownPreview()<CR>
 
-filetype plugin indent on
-
 " vim-quickrun
 " bufferを下部に表示
 let g:quickrun_config={'*': {'split': ''}}
@@ -92,9 +90,9 @@ set hlsearch
 " grep検索
 nnoremap <silent> ,g  :<C-u>Unite grep:.  -buffer-name=search-buffer<CR>
 
-" unite grepにpt(plutinum searcher)を使う
-if executable('pt')
-  let g:unite_source_grep_command = 'pt'
+" unite grepにhw(highway)を使う
+if executable('hw')
+  let g:unite_source_grep_command = 'hw'
   let g:unite_source_grep_default_opts = '--no-group --no-color'
   let g:unite_source_grep_recursive_opt = ''
   let g:unite_source_grep_encoding = 'utf-8'

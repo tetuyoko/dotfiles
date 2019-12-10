@@ -38,7 +38,7 @@ export ANDROID_SDK_ROOT=${ANDROID_HOME}
 
 #█▓▒░  golang
 export GOPATH=$HOME/gocode
-export GOROOT=/usr/local/Cellar/go/1.12.6/libexec/
+export GOROOT=/usr/local/Cellar/go/1.13.4/libexec/
 export PATH=$PATH:$GOPATH/bin
 export MGNCV=/Users/tetuyoko/gocode/src/mgncvtr
 
