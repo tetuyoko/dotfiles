@@ -1,3 +1,7 @@
+set runtimepath+=~/dotfiles/vim
+runtime! init/*.vim
+runtime! plugin/*.vim
+
 " ALE
 let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
 "let b:ale_fixers = {'vue': ['prettier', 'eslint']}
