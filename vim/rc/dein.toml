@@ -43,6 +43,7 @@ repo = 'prabirshrestha/vim-lsp'
 [[plugins]]
 repo = 'ryanolsonx/vim-lsp-javascript'
 [[plugins]]
+repo = 'ryanolsonx/vim-lsp-python'
 repo = 'prabirshrestha/asyncomplete.vim'
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete-lsp.vim'
