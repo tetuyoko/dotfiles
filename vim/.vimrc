@@ -1,10 +1,15 @@
+if !has('gui_running')
+  set t_Co=256
+endif
+
 set runtimepath+=~/dotfiles/vim
 runtime! init/*.vim
 runtime! plugin/*.vim
 
 " ALE
+let g:airline#extensions#tabline#enabled = 1
 let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
-"let b:ale_fixers = {'vue': ['prettier', 'eslint']}
+let b:ale_fixers = {'vue': ['prettier', 'eslint']}
 let g:ale_fixers = {'ruby': ['rubocop']}
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1

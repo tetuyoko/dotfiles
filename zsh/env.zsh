@@ -65,6 +65,8 @@ export PKG_CONFIG_PATH="/usr/local/opt/mysql@5.7/lib/pkgconfig"
 
 #export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/key.json
 
+export TERM=xterm-256color
+
 ## LANG
 export LANG=ja_JP.UTF-8
 #export LANG=en_US.UTF-8

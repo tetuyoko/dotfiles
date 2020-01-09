@@ -9,6 +9,8 @@ repo = 'Shougo/neosnippet-snippets'
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 [[plugins]]
+repo = 'itchyny/vim-gitbranch'
+[[plugins]]
 repo = 'maximbaz/lightline-ale'
 [[plugins]]
 repo = 'w0rp/ale'

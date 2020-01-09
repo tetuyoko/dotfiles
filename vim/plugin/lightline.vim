@@ -1,13 +1,14 @@
 let g:lightline = {
-      \  'colorscheme': 'jellybeans',
+      \  'colorscheme': 'powerline',
       \  'active': {
       \    'left': [
       \      ['mode', 'paste'],
-      \      ['readonly', 'filename', 'modified', 'ale'],
+      \      ['gitbranch', 'readonly', 'filename', 'modified'],
+      \      [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]
       \    ]
       \  },
       \  'component_function': {
-      \    'ale': 'ALEGetStatusLine'
+      \    'gitbranch': 'gitbranch#name',
       \  }
       \}
 let g:lightline.component_expand = {
@@ -17,13 +18,8 @@ let g:lightline.component_expand = {
       \  'linter_ok': 'lightline#ale#ok',
       \ }
 let g:lightline.component_type = {
-      \  'linter_checking': 'right',
+      \  'linter_checking': 'left',
       \  'linter_warnings': 'warning',
       \  'linter_errors': 'error',
-      \  'linter_ok': 'right',
-      \ }
-let g:lightline.active = {
-      \  'left': [
-      \    [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]
-      \   ]
+      \  'linter_ok': 'left',
       \ }
