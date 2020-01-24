@@ -44,4 +44,6 @@
 	email = tyokoyama53@gmail.com
 [user]
 	name = tetuyoko
-	email = tyokoyama53@gmail.com
+  email = tyokoyama53@gmail.com
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/

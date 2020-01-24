@@ -6,6 +6,8 @@ function gconf() {
 
     echo "=== The current account is as follows ==="
     gcloud config configurations list | grep "${config}"
+    cluster=$(kubectl config get-clusters | grep "${config}")
+    if [ -n "${cluster}" ]; then; kubectl config use-context "${cluster}"; fi
   fi
 }
 zle -N gconf
