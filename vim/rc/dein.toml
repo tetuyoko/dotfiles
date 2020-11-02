@@ -17,12 +17,6 @@ repo = 'w0rp/ale'
 [[plugins]]
 repo = 'szw/vim-tags'
 [[plugins]]
-repo = 'Shougo/neosnippet.vim'
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-[[plugins]]
-repo = 'Shougo/neocomplete.vim'
-[[plugins]]
 repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'kien/ctrlp.vim'
@@ -46,6 +40,7 @@ repo = 'prabirshrestha/vim-lsp'
 repo = 'ryanolsonx/vim-lsp-javascript'
 [[plugins]]
 repo = 'ryanolsonx/vim-lsp-python'
+[[plugins]]
 repo = 'prabirshrestha/asyncomplete.vim'
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete-lsp.vim'
@@ -57,8 +52,6 @@ repo = 'elixir-lang/vim-elixir'
 repo = "slim-template/vim-slim"
 [[plugins]]
 repo = 'Shougo/unite.vim'
-[[plugins]]
-repo = "ctrlpvim/ctrlp.vim"
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'

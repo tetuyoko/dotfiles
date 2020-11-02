@@ -5,8 +5,8 @@ function gconf() {
     gcloud config configurations activate ${config}
 
     echo "=== The current account is as follows ==="
-    gcloud config configurations list | grep "${config}"
-    cluster=$(kubectl config get-clusters | grep "${config}")
+    gcloud config configurations list | grep -m1 "${config}"
+    cluster=$(kubectl config get-clusters | grep -m1 "${config}")
     if [ -n "${cluster}" ]; then; kubectl config use-context "${cluster}"; fi
   fi
 }

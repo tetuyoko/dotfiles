@@ -86,3 +86,4 @@ source <(kubesec completion zsh)
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH="$PATH:~/.kube/plugins/jordanwilson230"
