@@ -19,6 +19,8 @@ let g:ale_completion_enabled = 1
 
 let g:jsx_ext_required = 1 " Allow JSX in normal JS files
 
+let g:deoplete#enable_at_startup = 1
+
 " ステータスライン表示
 set laststatus=2
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%{tagbar#currenttag('[%s]','')}%{fugitive#statusline()}%{SyntasticStatuslineFlag()}%{exists('*SkkGetModeStr')?SkkGetModeStr():''}%=%l/%L,%c%V%8P\

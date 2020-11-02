@@ -7,6 +7,8 @@ repo = 'Shougo/neosnippet.vim'
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 [[plugins]]
+repo = 'Shougo/deoplete.nvim'
+[[plugins]]
 repo = 'itchyny/lightline.vim'
 [[plugins]]
 repo = 'itchyny/vim-gitbranch'
