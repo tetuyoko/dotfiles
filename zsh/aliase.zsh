@@ -2,6 +2,7 @@
 #
 #███████▓▒░ basic
 alias so='source'
+alias sed='gsed'
 
 alias kc='kubectl'
 alias less='less -qR'

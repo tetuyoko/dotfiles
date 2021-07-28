@@ -73,9 +73,6 @@ repo = 'posva/vim-vue'
 repo = 'elzr/vim-json'
 if   = '''! has('kaoriya')'''
 [[plugins]]
-repo = 'cespare/vim-toml'
-on_ft = 'toml'
-[[plugins]]
 repo = 'osyo-manga/vim-precious'
 depends = ['context_filetype.vim']
 [[plugins]]
@@ -84,3 +81,6 @@ repo = 'Shougo/context_filetype.vim'
 repo = 'digitaltoad/vim-pug'
 [[plugins]]
 repo = 'mxw/vim-jsx'
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
