@@ -38,17 +38,21 @@ export ANDROID_SDK_ROOT=${ANDROID_HOME}
 
 #█▓▒░  golang
 export GOPATH=$HOME/gocode
-export GOROOT=/usr/local/Cellar/go/1.16.2/libexec/
+export GOROOT=/usr/local/Cellar/go/1.17.5/libexec/
 export PATH=$PATH:$GOPATH/bin
 export MGNCV=/Users/tetuyoko/gocode/src/mgncvtr
 export GOPRIVATE=github.com/zeals-co-ltd/protobuf
+
+#█▓▒░  python
+export PATH="$HOME/.pyenv/shims:${PATH}"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 
 #█▓▒░  react
 export REACT_EDITOR=atom
 
 #█▓▒░  rust
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$PYENV_ROOT/bin:$PATH"
 
 #█▓▒░  tensorflow
 export CUDA_HOME=/usr/local/cuda

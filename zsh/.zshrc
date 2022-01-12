@@ -80,10 +80,12 @@ if [ -f '/Users/tetuyoko/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tetuyo
 if [ -f '/Users/tetuyoko/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tetuyoko/google-cloud-sdk/completion.zsh.inc'; fi
 
 source <(kubectl completion zsh)
-source <(kubesec completion zsh)
 #source <(helm completion zsh)
 
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="$PATH:~/.kube/plugins/jordanwilson230"
+
+export PATH="$HOME/.poetry/bin:$PATH"
+export DEPLOY_KEY=$(cat ~/.ssh/github/id_rsa | base64)
