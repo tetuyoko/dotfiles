@@ -5,6 +5,8 @@
   default = simple
 [color]
   ui = auto
+[credential]
+  helper = store
 [alias]
   st = status
   di = diff

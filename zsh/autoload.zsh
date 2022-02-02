@@ -1,4 +1,5 @@
-#█▓▒░ autoload
+## Autoloads.
+#
 autoload run-help
 autoload -Uz cd-gitroot
 autoload -Uz zmv

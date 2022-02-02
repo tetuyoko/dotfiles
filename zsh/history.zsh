@@ -1,4 +1,5 @@
-# █▓▒░ history
+## History
+#
 setopt HIST_IGNORE_DUPS     # ignore duplication command history list
 setopt SHARE_HISTORY        # share command history data
 setopt EXTENDED_HISTORY

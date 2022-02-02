@@ -1,3 +1,5 @@
+## Incremental search for change directories.
+#
 function peco-cdr() {
   local selected_dir=$(cdr -l | awk '{ print $2 }' | peco)
   if [ -n "$selected_dir" ]; then

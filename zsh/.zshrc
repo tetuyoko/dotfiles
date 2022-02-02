@@ -1,45 +1,46 @@
-#                ░██      
-#  ██████  ██████░██      
-# ░░░░██  ██░░░░ ░██████  
-#    ██  ░░█████ ░██░░░██ 
-#   ██    ░░░░░██░██  ░██ 
-#  ██████ ██████ ░██  ░██ 
-# ░░░░░░ ░░░░░░  ░░   ░░  
+# Main .zshrc
 #
-# █▓▒░ load configs
+#
+
+## Load configs.
+#
 for config (~/.zsh/**/*.zsh) source $config
 source $HOME/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# vim bind
+
+## Bind keys.
+#
 bindkey -v
-
-fpath=($HOME/zsh/functions/cd-gitroot(N-/) $fpath)
-fpath=($HOME/zsh/functions/zsh-completions/src(N-/) $fpath)
-
-zle -N cdup
-zle -N clear_line
 bindkey '^K' clear_line
 bindkey '^R' peco_select_history
 bindkey '^E' peco-cdr
 bindkey '^G' gconf
 bindkey '^O' git-checkout
+
 unalias run-help
 HELPDIR=/usr/local/share/zsh/help
+zle -N cdup
+zle -N clear_line
 
+
+## Completions.
+#
 cd `cat ~/.curdir`
 compinit -u
 umask 002
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh ]]
+if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
 
-eval "$(direnv hook zsh)"
-eval "$(rbenv init - zsh)"
-eval "$(pyenv init -)"
+source <(kubectl completion zsh)
+#source <(helm completion zsh)
 
-#############################################
-## function
-#############################################
+
+## Function.
+#
 # % zman SHARE_HISTORY
+#
 function zman() {
   PAGER="less -g -s '+/^ {7}"$1"'" man zshall
 }
@@ -70,22 +71,10 @@ function clear_line() {
 
 function history-all { history -E 1 }
 
-export PATH="$HOME/.yarn/bin:$PATH"
+fpath=($HOME/zsh/functions/cd-gitroot(N-/) $fpath)
+fpath=($HOME/zsh/functions/zsh-completions/src(N-/) $fpath)
 
-# ssh-add ~/.ssh/github/id_rsa
+eval "$(direnv hook zsh)"
+eval "$(rbenv init - zsh)"
+eval "$(pyenv init -)"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/tetuyoko/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tetuyoko/google-cloud-sdk/path.zsh.inc'; fi
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/tetuyoko/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tetuyoko/google-cloud-sdk/completion.zsh.inc'; fi
-
-source <(kubectl completion zsh)
-#source <(helm completion zsh)
-
-export PATH="/usr/local/opt/gettext/bin:$PATH"
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-export PATH="$PATH:~/.kube/plugins/jordanwilson230"
-
-export PATH="$HOME/.poetry/bin:$PATH"
-export DEPLOY_KEY=$(cat ~/.ssh/github/id_rsa | base64)

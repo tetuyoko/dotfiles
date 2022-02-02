@@ -1,6 +1,6 @@
-#█▓▒░ prompt
+## Prompt
 #
-#█▓▒░ colors for permissions
+# colors for permissions
 if [[ "$EUID" -ne "0" ]]
 then  # if user is not root
 	USER_LEVEL="%F{white}"
@@ -13,7 +13,6 @@ local pinfo="%n@%m${WINDOW:+"[$WINDOW]"}"
 local pdir="%B%F{blue}%1~%f%b"
 local pmark="%B%(?,%F{gray},%F{red})%(!.%%.%%)%f%b"
 PROMPT="${USER_LEVEL}[$pinfo $pdir] $pmark "
-
 
 ## SPROMPT
 SPROMPT="%{%F{red}correct%f%{$reset_color%}: %R -> %r ?(ynae) "
@@ -42,19 +41,19 @@ autoload -U colors; colors
 #RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
 #RPROMPT='$ZSH_KUBECTL_PROMPT'
 
-#█▓▒░ allow functions in the prompt
+# allow functions in the prompt
 setopt PROMPT_SUBST
 
-#█▓▒░ autoload zsh functions
+# autoload zsh functions
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
  
-#█▓▒░ enable auto-execution of functions
+# enable auto-execution of functions
 typeset -ga preexec_functions
 typeset -ga precmd_functions
 typeset -ga chpwd_functions
  
-#█▓▒░ prepend git functions needed for prompt
+# prepend git functions needed for prompt
 preexec_functions+='preexec_update_git_vars'
 precmd_functions+='precmd_update_git_vars'
 precmd_functions+='_zsh_kubectl_prompt_precmd'

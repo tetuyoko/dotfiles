@@ -1,3 +1,5 @@
+## Shortcut-key for switch GCP configs.
+#
 function gconf() {
   projData=$(gcloud config configurations list | peco)
   if echo "${projData}" | grep -E "^[a-zA-Z].*" > /dev/null ; then

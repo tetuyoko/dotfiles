@@ -1,6 +1,5 @@
-#█▓▒░ aliases
+## Alias
 #
-#███████▓▒░ basic
 alias so='source'
 alias sed='gsed'
 
@@ -32,14 +31,14 @@ alias record="ffmpeg -f x11grab -s 1366x768 -an -r 16 -loglevel quiet -i :0.0 -b
 
 alias ssh-add='ssh-add -K'
 
-#███████▓▒░ rails
+# Rails
 alias be='bundle exec'
 alias biv='bundle install --path=vendor/bundle --jobs $(nproc)'
 
-#███████▓▒░ python
+# Python
 #alias python='python3'
 
-#███████▓▒░ pipe
+# Pipe
 alias -g L='| less'
 alias -g G='| grep'
 alias -g H='| head'
@@ -48,8 +47,3 @@ alias -g N='> /dev/null'
 
 #alias tmux="TERM=screen-256color-bce tmux"
 eval "$(hub alias -s)"
-
-# nullpointer url shortener
-short() {
-  curl -F"shorten=$*" https://0x0.st
-}
