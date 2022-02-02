@@ -36,7 +36,7 @@ alias be='bundle exec'
 alias biv='bundle install --path=vendor/bundle --jobs $(nproc)'
 
 # Python
-#alias python='python3'
+alias python='python3'
 
 # Pipe
 alias -g L='| less'

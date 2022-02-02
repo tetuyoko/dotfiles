@@ -18,15 +18,16 @@ export MGNCV=/Users/tetuyoko/gocode/src/mgncvtr
 export GOPRIVATE=github.com/zeals-co-ltd/protobuf
 
 ## Python
-export PATH="$HOME/.pyenv/shims:${PATH}"
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+#export PATH="$HOME/.pyenv/shims:${PATH}"
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
 
 ## Tensorflow
 export CUDA_HOME=/usr/local/cuda
 export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
 export PATH="$CUDA_HOME/bin:$PATH"
-export TENSOR_PATH="/usr/local/var/pyenv/versions/3.5.2/lib/python3.5/site-packages/tensorflow"
+#export TENSOR_PATH="/usr/local/var/pyenv/versions/3.5.2/lib/python3.5/site-packages/tensorflow"
 
 ## JavaScript
 export PATH="$HOME/.yarn/bin:$PATH"
