@@ -1,6 +1,4 @@
 [[plugins]]
-repo = 'hashivim/vim-terraform'
-[[plugins]]
 repo = 'vim-scripts/mru.vim'
 [[plugins]]
 repo = 'Shougo/dein.vim'
@@ -13,9 +11,9 @@ repo = 'itchyny/lightline.vim'
 [[plugins]]
 repo = 'itchyny/vim-gitbranch'
 [[plugins]]
-repo = 'maximbaz/lightline-ale'
-[[plugins]]
 repo = 'w0rp/ale'
+[[plugins]]
+repo = 'maximbaz/lightline-ale'
 [[plugins]]
 repo = 'szw/vim-tags'
 [[plugins]]
@@ -25,8 +23,6 @@ repo = 'kien/ctrlp.vim'
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 [[plugins]]
-repo = 'tpope/vim-rails'
-[[plugins]]
 repo = 'majutsushi/tagbar'
 [[plugins]]
 # 自動で閉じる
@@ -35,44 +31,44 @@ repo = 'tpope/vim-endwise'
 # ドキュメント参照
 repo = 'thinca/vim-ref'
 [[plugins]]
-repo = 'prabirshrestha/async.vim'
-[[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-[[plugins]]
-repo = 'ryanolsonx/vim-lsp-javascript'
-[[plugins]]
-repo = 'ryanolsonx/vim-lsp-python'
-[[plugins]]
-repo = 'prabirshrestha/asyncomplete.vim'
-[[plugins]]
-repo = 'prabirshrestha/asyncomplete-lsp.vim'
-[[plugins]]
 repo = 'natebosch/vim-lsc'
-[[plugins]]
-repo = 'elixir-lang/vim-elixir'
-[[plugins]]
-repo = "slim-template/vim-slim"
 [[plugins]]
 repo = 'Shougo/unite.vim'
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 [[plugins]]
-repo = 'othree/yajs.vim'
-[[plugins]]
-repo = 'posva/vim-vue'
-[[plugins]]
-repo = 'elzr/vim-json'
-if   = '''! has('kaoriya')'''
-[[plugins]]
 repo = 'osyo-manga/vim-precious'
 depends = ['context_filetype.vim']
 [[plugins]]
 repo = 'Shougo/context_filetype.vim'
+
+# Programing Languages
 [[plugins]]
 repo = 'digitaltoad/vim-pug'
 [[plugins]]
+repo = 'othree/yajs.vim'
+[[plugins]]
+repo = 'posva/vim-vue'
+[[plugins]]
 repo = 'mxw/vim-jsx'
+[[plugins]]
+repo = 'elzr/vim-json'
+if   = '''! has('kaoriya')'''
 [[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
+[[plugins]]
+repo = 'elixir-lang/vim-elixir'
+[[plugins]]
+repo = "slim-template/vim-slim"
+[[plugins]]
+repo = 'tpope/vim-rails'
+
+# Language Servers
+[[plugins]]
+repo = 'ryanolsonx/vim-lsp-javascript'
+[[plugins]]
+repo = 'ryanolsonx/vim-lsp-python'
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'

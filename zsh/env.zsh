@@ -23,6 +23,10 @@ export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 #export PYENV_ROOT="$HOME/.pyenv"
 #export PATH="$PYENV_ROOT/bin:$PATH"
 
+## Deno
+export DENO_INSTALL="$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 ## Tensorflow
 export CUDA_HOME=/usr/local/cuda
 export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
@@ -72,9 +76,9 @@ export PATH="/usr/local/opt/gettext/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
 export PATH="$HOME/.poetry/bin:$PATH"
-export PATH="$PATH:~/.kube/plugins/jordanwilson230"
+export PATH="$PATH:$HOME/.kube/plugins/jordanwilson230"
 
-export PATH="$PATH:~/.dotnet/tools"
+export PATH="$PATH:$HOME/.dotnet/tools"
 
 export DEPLOY_KEY=$(cat ~/.ssh/github/id_rsa | base64)
 export TERM=xterm-256color
