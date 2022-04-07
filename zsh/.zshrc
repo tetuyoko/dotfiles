@@ -76,5 +76,3 @@ fpath=($HOME/zsh/functions/zsh-completions/src(N-/) $fpath)
 
 eval "$(direnv hook zsh)"
 eval "$(rbenv init - zsh)"
-#eval "$(pyenv init -)"
-

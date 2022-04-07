@@ -74,6 +74,8 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$PATH:~/.kube/plugins/jordanwilson230"
 
+export PATH="$PATH:~/.dotnet/tools"
+
 export DEPLOY_KEY=$(cat ~/.ssh/github/id_rsa | base64)
 export TERM=xterm-256color
 
