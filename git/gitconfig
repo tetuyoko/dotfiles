@@ -1,5 +1,5 @@
 [init]
-	defaultBranch = main
+  defaultBranch = main
   #templatedir = ~/.git_template
 [push]
   default = simple
@@ -20,10 +20,11 @@
   excludesfile = ~/.gitignore
   autocrlf = input
   ignorecase = false
+  whitespace = cr-at-eol
 [merge]
   ff = false
 [pull]
-	ff = only
+  ff = only
 [commit]
   template = ~/.gitmessage
 [fetch]
@@ -42,12 +43,12 @@
   generic = g move-first-line
   generic = G move-last-line
 [gpg]
-	program = gpg1 [user]
-	signingkey = 1588D06C
-	name = tetuyoko
-	email = tyokoyama53@gmail.com
+  program = gpg1 [user]
+  signingkey = 1588D06C
+  name = tetuyoko
+  email = tyokoyama53@gmail.com
 [user]
-	name = tetuyoko
+  name = tetuyoko
   email = tyokoyama53@gmail.com
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/

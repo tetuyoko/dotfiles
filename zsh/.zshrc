@@ -76,3 +76,14 @@ fpath=($HOME/zsh/functions/zsh-completions/src(N-/) $fpath)
 
 eval "$(direnv hook zsh)"
 eval "$(rbenv init - zsh)"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/tetuyoko/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tetuyoko/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/tetuyoko/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tetuyoko/google-cloud-sdk/completion.zsh.inc'; fi
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/Cellar/tfenv/2.2.3/versions/1.2.2/terraform terraform

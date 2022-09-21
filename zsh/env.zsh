@@ -12,7 +12,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 ## Go
 export GOPATH=$HOME/gocode
-export GOROOT=/usr/local/Cellar/go/1.17.5/libexec/
+export GOROOT=/usr/local/Cellar/go/1.18.3/libexec/
 export PATH=$PATH:$GOPATH/bin
 export MGNCV=/Users/tetuyoko/gocode/src/mgncvtr
 export GOPRIVATE=github.com/zeals-co-ltd/protobuf

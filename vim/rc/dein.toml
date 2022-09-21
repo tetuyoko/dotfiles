@@ -65,6 +65,15 @@ repo = "slim-template/vim-slim"
 [[plugins]]
 repo = 'tpope/vim-rails'
 
+# terraform-lsp
+[[plugins]]
+repo = 'prabirshrestha/async.vim'
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
+
+
 # Language Servers
 [[plugins]]
 repo = 'ryanolsonx/vim-lsp-javascript'

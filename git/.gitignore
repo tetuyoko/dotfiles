@@ -16,4 +16,6 @@ tags
 *.retry
 stdout
 
+_docker-compose.override.yml
+
 .python-version
