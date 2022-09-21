@@ -11,6 +11,8 @@
   st = status
   di = diff
   dic = diff --cached
+  dft = difftool
+  dftc = difftool --cached
   ci = commit
   br = branch
   co = checkout
@@ -52,3 +54,12 @@
   email = tyokoyama53@gmail.com
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
+[diff]
+  # external = difft
+  tool = difftastic
+[difftool]
+  prompt = false
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+  difftool = true
