@@ -76,6 +76,7 @@ fpath=($HOME/zsh/functions/zsh-completions/src(N-/) $fpath)
 
 eval "$(direnv hook zsh)"
 eval "$(rbenv init - zsh)"
+eval "$(starship init zsh)"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
