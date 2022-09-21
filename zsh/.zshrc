@@ -12,8 +12,8 @@ source $HOME/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #
 bindkey -v
 bindkey '^K' clear_line
-bindkey '^R' peco_select_history
-bindkey '^E' peco-cdr
+bindkey '^R' fzf_select_history
+bindkey '^E' fzf-cdr
 bindkey '^G' gconf
 bindkey '^O' git-checkout
 

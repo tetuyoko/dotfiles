@@ -9,14 +9,14 @@ SAVEHIST=10000
 
 function exists { which $1 &> /dev/null }
 
-if exists peco; then
-  function peco_select_history() {
+if exists fzf; then
+  function fzf_select_history() {
     local tac
     exists gtac && tac="gtac" || { exists tac && tac="tac" || { tac="tail -r" } }
-    BUFFER=$(history -n 1 | eval $tac | peco --query "$LBUFFER")
+    BUFFER=$(history -n 1 | eval $tac | fzf --query "$LBUFFER")
     CURSOR=$#BUFFER         # move cursor
     zle -R -c               # refresh
   }
 
-  zle -N peco_select_history
+  zle -N fzf_select_history
 fi

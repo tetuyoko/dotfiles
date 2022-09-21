@@ -19,7 +19,8 @@ alias chrm='open "/Applications/Google Chrome.app" --args --profile-directory="D
 alias ctags="`brew --prefix`/bin/ctags"
 #alias node='node --expose_gc --optimize_for_size --max_old_space_size=4096 --gc_interval=100'
 
-alias hp='history-all | peco'
+alias fzf='fzf --layout=reverse --height=65%'
+alias hp='history-all | fzf'
 alias tailess='less -qR +F log/development.log'
 alias zmv='noglob zmv -W'
 alias readlink=greadlink
@@ -42,7 +43,7 @@ alias python='python3'
 alias -g L='| less'
 alias -g G='| grep'
 alias -g H='| head'
-alias -g P='| peco'
+alias -g P='| fzf'
 alias -g N='> /dev/null'
 
 #alias tmux="TERM=screen-256color-bce tmux"

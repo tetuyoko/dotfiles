@@ -17,7 +17,7 @@ function kx-complete() {
 function kx() {
   name="$1"
   if [ -z "$name" ]; then
-    line=$(gcloud container clusters list | peco)
+    line=$(gcloud container clusters list | fzf)
     name=$(echo $line | awk '{print $1}')
   else
     line=$(gcloud container clusters list | grep "$name")
