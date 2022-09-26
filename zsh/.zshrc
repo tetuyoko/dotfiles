@@ -1,19 +1,16 @@
 # Main .zshrc
 #
-#
-
-## Load configs.
-#
+# Load configs.
 for config (~/.zsh/**/*.zsh) source $config
 source $HOME/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
-## Bind keys.
-#
+# Bind keys.
 bindkey -v
 bindkey '^K' clear_line
 bindkey '^R' fzf_select_history
 bindkey '^E' fzf-cdr
+bindkey '^[' ghq-fzf
 bindkey '^G' gconf
 bindkey '^O' git-checkout
 
@@ -23,8 +20,7 @@ zle -N cdup
 zle -N clear_line
 
 
-## Completions.
-#
+# Completions.
 cd `cat ~/.curdir`
 compinit -u
 umask 002
@@ -37,10 +33,8 @@ source <(kubectl completion zsh)
 #source <(helm completion zsh)
 
 
-## Function.
-#
+# Function.
 # % zman SHARE_HISTORY
-#
 function zman() {
   PAGER="less -g -s '+/^ {7}"$1"'" man zshall
 }

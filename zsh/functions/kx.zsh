@@ -1,5 +1,4 @@
-## Shortcut-key for switch kubernetes clusters.
-#
+# Shortcut-key for switch kubernetes clusters.
 function gke-activate() {
   name="$1"
   zone_or_region="$2"

@@ -1,12 +1,11 @@
 scriptencoding utf-8
-" 全角
+" Zenkaku.
 set ambiwidth=double
-" ミュートにする
+" Stop ring the bell.
 set t_vb=
 set visualbell
 set noerrorbells
 set modeline
-" クリップボード設定
 set clipboard+=unnamed
 set nocompatible
 set number
@@ -17,11 +16,10 @@ set linespace=0
 set wildmenu
 set showcmd
 set textwidth=120
-" backup 
 set swapfile
 set directory=~/.vim/swp
-" edit
-" --------------------
+
+" Edit
 set autoindent
 set cindent
 set showmatch
@@ -30,9 +28,7 @@ set clipboard=unnamed
 set pastetoggle=<F12>
 set guioptions+=a
 
-" tab
-" --------------------
-
+" Tab
 au BufNewFile,BufRead *.go set noexpandtab tabstop=4 shiftwidth=4
 
 set tabstop=2
@@ -42,8 +38,7 @@ set shiftwidth=2
 set shiftround
 set nowrap
 
-" keymap
-" --------------------
+" Keymap
 set bioskey
 set timeout
 set timeoutlen=500
