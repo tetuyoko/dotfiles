@@ -95,8 +95,7 @@ set hlsearch
 :nnoremap <ESC><ESC> :nohlsearch<CR>
 :nnoremap <F9> :NERDTreeToggle<CR>
 :nnoremap <silent><C-n> :NERDTreeToggle<CR>
-" :nnoremap <silent><C-n> :NERDTreeCWD<CR>
-" :nnoremap <silent><C-a> :NERDTreeClose<CR>
+:nnoremap <silent><C-a> :NERDTreeClose<CR>
 
 " grep検索
 nnoremap <silent> ,g  :<C-u>Unite grep:.  -buffer-name=search-buffer<CR>
@@ -110,7 +109,6 @@ if executable('hw')
 endif
 
 :nnoremap <F9> :NERDTreeToggle<CR>
-
 let g:NERDTreeIgnore=['\.sass-cache', '\.DS_Store','\.bundle$',  '\.git$',  '\.clean$', '\.swp$', '\.bak$', '\~$']
 let g:NERDTreeShowHidden=1
 let g:NERDTreeMinimalUI=1

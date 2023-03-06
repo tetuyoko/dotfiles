@@ -10,7 +10,7 @@ bindkey -v
 bindkey '^K' clear_line
 bindkey '^R' fzf_select_history
 bindkey '^E' fzf-cdr
-bindkey '^[' ghq-fzf
+bindkey '^]' ghq-fzf
 bindkey '^G' gconf
 bindkey '^O' git-checkout
 
@@ -80,4 +80,4 @@ if [ -f '/Users/tetuyoko/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tetuyo
 if [ -f '/Users/tetuyoko/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tetuyoko/google-cloud-sdk/completion.zsh.inc'; fi
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/Cellar/tfenv/2.2.3/versions/1.2.2/terraform terraform
+complete -o nospace -C /usr/local/bin/terraform terraform
