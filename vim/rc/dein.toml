@@ -21,7 +21,7 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'kien/ctrlp.vim'
 [[plugins]]
-repo = 'lambdalisue/fern.vim'
+repo = 'preservim/nerdtree'
 [[plugins]]
 repo = 'majutsushi/tagbar'
 [[plugins]]

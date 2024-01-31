@@ -17,7 +17,7 @@ zstyle ':vcs_info:*' actionformats '%b|%a'
 local pinfo="%n@%m${WINDOW:+"[$WINDOW]"}"
 local pdir="%B%F{blue}%1~%f%b"
 local pmark="%B%(?,%F{gray},%F{red})%(!.%%.%%)%f%b"
-local vcs="%1v"
+local vcs="🪵 %1v"
 PROMPT="${USER_LEVEL}[$pinfo $pdir $vcs]
 $pmark "
 

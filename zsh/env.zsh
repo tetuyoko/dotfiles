@@ -11,8 +11,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 . "$HOME/.cargo/env"
 
 ## Go
-export GOPATH=$HOME/gocode
-export GOROOT=/usr/local/Cellar/go/1.18.3/libexec/
+export GOPATH=$HOME/.go
+export GOROOT=
 export PATH=$PATH:$GOPATH/bin
 export MGNCV=/Users/tetuyoko/gocode/src/mgncvtr
 export GOPRIVATE=github.com/zeals-co-ltd/protobuf
