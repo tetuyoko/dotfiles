@@ -18,7 +18,7 @@ export MGNCV=/Users/tetuyoko/gocode/src/mgncvtr
 export GOPRIVATE=github.com/zeals-co-ltd/protobuf
 
 ## Python
-export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+export PATH="/usr/local/opt/python@3.12/bin:$PATH"
 #export PATH="$HOME/.pyenv/shims:${PATH}"
 #export PYENV_ROOT="$HOME/.pyenv"
 #export PATH="$PYENV_ROOT/bin:$PATH"
@@ -31,7 +31,6 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 export CUDA_HOME=/usr/local/cuda
 export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
 export PATH="$CUDA_HOME/bin:$PATH"
-#export TENSOR_PATH="/usr/local/var/pyenv/versions/3.5.2/lib/python3.5/site-packages/tensorflow"
 
 ## JavaScript
 export PATH="$HOME/.yarn/bin:$PATH"
@@ -67,10 +66,10 @@ export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/application_default_crede
 export PATH=$PATH:/usr/local/sessionmanagerplugin/bin
 
 ## MySQL
-export LDFLAGS="-L/usr/local/opt/mysql@5.7/lib"
-export CPPFLAGS="-I/usr/local/opt/mysql@5.7/include"
-export PKG_CONFIG_PATH="/usr/local/opt/mysql@5.7/lib/pkgconfig"
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/mysql@8.0/lib"
+export CPPFLAGS="-I/usr/local/opt/mysql@8.0/include"
+export PKG_CONFIG_PATH="/usr/local/opt/mysql@8.0/lib/pkgconfig"
+export PATH="/usr/local/opt/mysql@8.0/bin:$PATH"
 
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
