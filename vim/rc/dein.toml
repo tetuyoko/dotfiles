@@ -64,6 +64,8 @@ repo = 'elixir-lang/vim-elixir'
 repo = "slim-template/vim-slim"
 [[plugins]]
 repo = 'tpope/vim-rails'
+[[plugins]]
+repo = 'hashivim/vim-terraform'
 
 # terraform-lsp
 [[plugins]]
