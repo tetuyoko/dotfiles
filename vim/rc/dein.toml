@@ -1,6 +1,4 @@
 [[plugins]]
-repo = 'vim-scripts/mru.vim'
-[[plugins]]
 repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
@@ -49,8 +47,6 @@ repo = 'digitaltoad/vim-pug'
 [[plugins]]
 repo = 'othree/yajs.vim'
 [[plugins]]
-repo = 'posva/vim-vue'
-[[plugins]]
 repo = 'mxw/vim-jsx'
 [[plugins]]
 repo = 'elzr/vim-json'
@@ -58,12 +54,6 @@ if   = '''! has('kaoriya')'''
 [[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
-[[plugins]]
-repo = 'elixir-lang/vim-elixir'
-[[plugins]]
-repo = "slim-template/vim-slim"
-[[plugins]]
-repo = 'tpope/vim-rails'
 [[plugins]]
 repo = 'hashivim/vim-terraform'
 
