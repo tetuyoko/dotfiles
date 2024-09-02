@@ -143,46 +143,44 @@ set bioskey
 set timeout
 set timeoutlen=500
 
-"dein Scripts
+"vim plug
 "-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
 
-let s:dein_dir = expand('~/.cache/dein')
-let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+call plug#begin()
 
-" dein.vim install
-if &runtimepath !~# '/dein.vim'
-  if !isdirectory(s:dein_repo_dir)
-    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
-  endif
-  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
-endif
+" List your plugins here
+Plug 'tpope/vim-sensible'
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'itchyny/lightline.vim'
+Plug 'itchyny/vim-gitbranch'
+Plug 'w0rp/ale'
+Plug 'maximbaz/lightline-ale'
+Plug 'szw/vim-tags'
+Plug 'tpope/vim-fugitive'
+Plug 'kien/ctrlp.vim'
+Plug 'preservim/nerdtree'
+Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-endwise'
+Plug 'thinca/vim-ref'
+Plug 'natebosch/vim-lsc'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/vimproc.vim'
+Plug 'osyo-manga/vim-precious'
+Plug 'Shougo/context_filetype.vim'
+Plug 'digitaltoad/vim-pug'
+Plug 'othree/yajs.vim'
+Plug 'mxw/vim-jsx'
+Plug 'elzr/vim-json'
+Plug 'cespare/vim-toml'
+Plug 'hashivim/vim-terraform'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/vim-lsp'
 
-" 設定開始
-if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
+call plug#end()
 
-  let g:rc_dir    = expand('~/.vim/rc')
-  let s:toml      = g:rc_dir . '/dein.toml'
-  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
-
-  " load TOML and cache
-  call dein#load_toml(s:toml,      {'lazy': 0})
-  call dein#load_toml(s:lazy_toml, {'lazy': 1})
-
-  call dein#add('preservim/nerdtree')
-  call dein#end()
-  call dein#save_state()
-endif
-
-if dein#check_install()
-  call dein#install()
-endif
-
-"End dein Scripts-------------------------
 
 " brackets
 inoremap { {}<LEFT>
