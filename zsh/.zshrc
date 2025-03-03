@@ -68,7 +68,6 @@ function history-all { history -E 1 }
 fpath=($HOME/zsh/functions/cd-gitroot(N-/) $fpath)
 fpath=($HOME/zsh/functions/zsh-completions/src(N-/) $fpath)
 
-eval "$(direnv hook zsh)"
 eval "$(rbenv init - zsh)"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
@@ -82,6 +81,9 @@ if [ -f '/Users/tetuyoko/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 export PATH="/usr/local/opt/libpq/bin:$PATH"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
-. "$HOME/.asdf/asdf.sh"
-
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/tetuyoko/.docker/completions $fpath)
+compinit
+# End of Docker CLI completions
