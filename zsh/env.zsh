@@ -50,9 +50,7 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
 ## k8s
 export PATH="$PATH:$HOME/.kube/plugins/jordanwilson230"
-
-
-export DEPLOY_KEY=$(cat ~/.ssh/github/id_rsa | base64)
+#export DEPLOY_KEY=$(cat ~/.ssh/github/id_rsa | base64)
 export TERM=xterm-256color
 
 ## LANG

@@ -52,8 +52,8 @@
 [user]
   name = tetuyoko
   email = tyokoyama53@gmail.com
-[url "ssh://git@github.com/"]
-  insteadOf = https://github.com/
+#[url "ssh://git@github.com/"]
+#  insteadOf = https://github.com/
 [diff]
   # external = difft
   tool = difftastic
