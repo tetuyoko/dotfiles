@@ -2,7 +2,7 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-set runtimepath+=~/dotfiles/vim
+set runtimepath+=~/ghq/github.com/tetuyoko/dotfiles/vim
 runtime! init/*.vim
 runtime! plugin/*.vim
 
@@ -196,7 +196,7 @@ inoremap <> <><LEFT>
 set swapfile
 set directory=~/.vim/swp
 
-execute pathogen#infect()
+"execute pathogen#infect()
 
 syntax on
 filetype plugin indent on

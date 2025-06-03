@@ -1,5 +1,4 @@
 # Main .zshrc
-#
 # Load configs.
 for config (~/.zsh/**/*.zsh) source $config
 source $HOME/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
