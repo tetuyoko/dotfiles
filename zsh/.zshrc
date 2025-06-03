@@ -1,14 +1,15 @@
 # Main .zshrc
 # Load configs.
-for config (~/.zsh/**/*.zsh) source $config
-source $HOME/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+for config (~/ghq/github.com/tetuyoko/dotfiles/zsh/**/*.zsh) source $config
+source $HOME/ghq/github.com/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
 
 # Bind keys.
 bindkey -v
 bindkey '^K' clear_line
 bindkey '^R' fzf_select_history
-bindkey '^E' fzf-cdr
+#bindkey '^E' fzf-cdr
 bindkey '^]' ghq-fzf
 bindkey '^G' gconf
 bindkey '^O' git-checkout

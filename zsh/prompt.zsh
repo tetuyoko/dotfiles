@@ -30,8 +30,8 @@ autoload -U colors; colors
 setopt PROMPT_SUBST
 
 # autoload zsh functions
-fpath=(~/.zsh/functions $fpath)
-autoload -U ~/.zsh/functions/*(:t)
+fpath=(~/ghq/github.com/tetuyoko/dotfiles/zsh/functions $fpath)
+autoload -U ~/ghq/github.com/tetuyoko/dotfiles/zsh/functions/*(:t)
 
 #. /usr/local/bin/autojump
 precmd() {
