@@ -27,3 +27,8 @@
   ruby symlink.rb
 ```
 
+## Disable key press and hold hook in Mac OS
+
+```
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
